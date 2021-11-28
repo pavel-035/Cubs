@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,6 +9,555 @@
     <link rel="stylesheet" href="./src/styles/main.css">
 </head>
 <body>
+    <div class="cubes-wrapper">
+        <header class="cubes-header">
+            <div class="cubes-header__image cubes-img_box">
+                <img src="./src/assets/images/png/HeaderImage.png" alt="preview">
+            </div>
+            <div class="cubes-header__image cubes-header__image_mini cubes-img_box">
+                <img src="./src/assets/images/png/mini/HeaderImage.png" alt="preview">
+            </div>
+            <div class="cubes-header__image cubes-header__image_laptop cubes-img_box">
+                <img src="./src/assets/images/png/laptop/HeaderImage.png" alt="preview">
+            </div>
 
+            <div class="cubes-header__cube cubes-header__cube_left cubes-img_box translateOnMouseMove"
+                 data-animateSpeed="70"
+            >
+                <img src="src/assets/images/png/Header/CubeLeft.png" alt="cube">
+            </div>
+            <div class="cubes-header__cube cubes-header__cube_right cubes-img_box translateOnMouseMove"
+                 data-animateSpeed="50"
+            >
+                <img src="src/assets/images/png/Header/CubeRight.png" alt="cube">
+            </div>
+        </header>
+        <main>
+            <section class="cubes-about">
+                <div class="cubes-about__box cubes-section_box">
+                    <div>
+                        <div class="cubes-about__description cubes-description">
+                        <span class="cubes-description__name">
+                            О проекте
+                        </span>
+                            <h2 class="cubes-description__heading">
+                                Наши кубики как настоящие!
+                            </h2>
+                            <p class="cubes-description__text">
+                                “The Boarding Dice Pro” — удобное мобильное приложение, с помощью котрого вы можете <br>
+                                с легкостью бросать игральные кубики и наслаждаться игрой где угодно и когда угодно!
+                            </p>
+                        </div>
+                        <ul class="cubes-about__list">
+                            <li class="cubes-about__item">Простотой и понятный интерфейс</li>
+                            <li class="cubes-about__item">Реалистичные скины кубиков</li>
+                            <li class="cubes-about__item">Честный генератор</li>
+                            <li class="cubes-about__item">Доступно большое количество игр</li>
+                        </ul>
+                    </div>
+                    <div class="cubes-about__figures">
+                        <div class="cubes-about__image cubes-img_box translateOnMouseMove"
+                             data-animateSpeed="70"
+                        >
+                            <img src="src/assets/images/png/AboutImage.png" alt="network">
+                        </div>
+                        <div class="cubes-about__image cubes-about__image_laptop cubes-img_box">
+                            <img src="src/assets/images/png/laptop/AboutImage.png" alt="network">
+                        </div>
+                        <div class="cubes-about__image cubes-about__image_mini cubes-img_box">
+                            <img src="src/assets/images/png/mini/AboutImage.png" alt="network">
+                        </div>
+
+                        <div class="cubes-about__cube cubes-about__cube_left cubes-img_box translateOnMouseMove"
+                             data-animateSpeed="30"
+                        >
+                            <img src="src/assets/images/png/About/CubeLeft.png" alt="cube">
+                        </div>
+                        <div class="cubes-about__cube cubes-about__cube_middle cubes-img_box translateOnMouseMove"
+                             data-animateSpeed="50"
+                        >
+                            <img src="src/assets/images/png/About/CubeMiddle.png" alt="cube">
+                        </div>
+                        <div class="cubes-about__cube cubes-about__cube_right cubes-img_box translateOnMouseMove"
+                             data-animateSpeed="50"
+                        >
+                            <img src="src/assets/images/png/About/CubeRight.png" alt="cube">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="cubes-interface">
+                <div class="cubes-interface__box cubes-section_box">
+                    <div class="cubes-interface__description cubes-description">
+                        <span class="cubes-description__name">
+                            Интерфейс проекта
+                        </span>
+                        <h2 class="cubes-description__heading">
+                            От прототипирования к чистовому дизайну
+                        </h2>
+                        <p class="cubes-description__text">
+                            Здесь пример текста в 2 строчки, нужно что-то написать или придумать, просто пример текста в 2 строчки, нужно что-то написать или придумать
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="cubes-fonts" id="fonts-section">
+                <div class="cubes-fonts__gallery">
+                    <div class="cubes-fonts__hand cubes-img_box">
+                        <img src="src/assets/images/png/Hand.png" alt="hand">
+                    </div>
+                    <div class="cubes-fonts__hand cubes-fonts__hand_finger cubes-img_box">
+                        <img src="src/assets/images/png/Finger.png" alt="finger">
+                    </div>
+                    <div class="cubes-fonts__screens">
+                        <ul class="cubes-fonts__carousel" id="carousel">
+                            <li class="cubes-fonts__element">
+                                <div class="cubes-fonts__screen cubes-img_box">
+                                    <img src="src/assets/images/png/Screens/1.png" alt="screen">
+                                </div>
+                            </li>
+                            <li class="cubes-fonts__element">
+                                <div class="cubes-fonts__screen cubes-img_box">
+                                    <img src="src/assets/images/png/Screens/2.png" alt="screen">
+                                </div>
+                            </li>
+                            <li class="cubes-fonts__element">
+                                <div class="cubes-fonts__screen cubes-img_box">
+                                    <img src="src/assets/images/png/Screens/3.png" alt="screen">
+                                </div>
+                            </li>
+                            <li class="cubes-fonts__element">
+                                <div class="cubes-fonts__screen cubes-img_box">
+                                    <img src="src/assets/images/png/Screens/4.png" alt="screen">
+                                </div>
+                            </li>
+                            <li class="cubes-fonts__element">
+                                <div class="cubes-fonts__screen cubes-img_box">
+                                    <img src="src/assets/images/png/Screens/5.png" alt="screen">
+                                </div>
+                            </li>
+                            <li class="cubes-fonts__element">
+                                <div class="cubes-fonts__screen cubes-img_box">
+                                    <img src="src/assets/images/png/Screens/6.png" alt="screen">
+                                </div>
+                            </li>
+                            <li class="cubes-fonts__element">
+                                <div class="cubes-fonts__screen cubes-img_box">
+                                    <img src="src/assets/images/png/Screens/7.png" alt="screen">
+                                </div>
+                            </li>
+                            <li class="cubes-fonts__element">
+                                <div class="cubes-fonts__screen cubes-img_box">
+                                    <img src="src/assets/images/png/Screens/8.png" alt="screen">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cubes-fonts__box cubes-section_box">
+                    <div class="cubes-fonts__description cubes-description">
+                        <span class="cubes-description__name cubes-description__name_light">
+                            Шрифты & цвета
+                        </span>
+                        <h2 class="cubes-description__heading cubes-description__heading_light">
+                            Проработаем цветовую палитру и подберем шрифт
+                        </h2>
+                        <p class="cubes-description__text cubes-description__text_light">
+                            Здесь пример текста в 2 строчки, нужно что-то написать или придумать, просто пример текста в 2 строчки, нужно что-то написать или придумать
+                        </p>
+                    </div>
+                    <div class="cubes-fonts__font">
+                        American Typewriter
+                    </div>
+
+                    <div class="cubes-fonts__colors">
+                        <div class="cubes-fonts__color cubes-img_box cubes-fonts__animate_two">
+                            <img src="src/assets/images/png/Colors/1.png" alt="color">
+                        </div>
+                        <div class="cubes-fonts__color cubes-img_box cubes-fonts__animate">
+                            <img src="src/assets/images/png/Colors/2.png" alt="color">
+                        </div>
+                        <div class="cubes-fonts__color cubes-img_box cubes-fonts__animate">
+                            <img src="src/assets/images/png/Colors/3.png" alt="color">
+                        </div>
+                        <div class="cubes-fonts__color cubes-img_box">
+                            <img src="src/assets/images/png/Colors/4.png" alt="color">
+                        </div>
+                    </div>
+
+                    <div class="cubes-fonts__cube cubes-fonts__cube_left cubes-img_box translateOnMouseMove"
+                         data-animateSpeed="70"
+                    >
+                        <img src="src/assets/images/png/Fonts/CubeLeft.png" alt="cube">
+                    </div>
+                    <div class="cubes-fonts__cube cubes-fonts__cube_middle cubes-img_box translateOnMouseMove"
+                         data-animateSpeed="50"
+                    >
+                        <img src="src/assets/images/png/Fonts/CubeMiddle.png" alt="cube">
+                    </div>
+                    <div class="cubes-fonts__cube cubes-fonts__cube_back cubes-img_box translateOnMouseMove"
+                         data-animateSpeed="30"
+                    >
+                        <img src="src/assets/images/png/Fonts/CubeBack.png" alt="cube">
+                    </div>
+                    <div class="cubes-fonts__cube cubes-fonts__cube_right cubes-img_box translateOnMouseMove"
+                         data-animateSpeed="30"
+                    >
+                        <img src="src/assets/images/png/Fonts/CubeRight.png" alt="cube">
+                    </div>
+                </div>
+            </section>
+            <section class="cubes-capabilities">
+                <div class="cubes-capabilities__box cubes-section_box">
+                    <div class="cubes-capabilities__description cubes-description">
+                        <span class="cubes-description__name">
+                            Возможности приложения
+                        </span>
+                        <h2 class="cubes-description__heading">
+                            Наши специалисты учитывают все пожелания заказчика
+                        </h2>
+                        <p class="cubes-description__text">
+                            Здесь пример текста в 2 строчки, нужно что-то написать или придумать, просто пример<br>
+                            текста в 2 строчки, нужно что-то написать или придумать
+                        </p>
+                    </div>
+                </div>
+                <div class="cubes-capabilities__cards">
+                    <div class="cubes-capabilities__item">
+                        <div class="cubes-capabilities__drop">
+                            <div class="cubes-capabilities__data">
+                                <div class="cubes-capabilities__num">
+                                    01
+                                </div>
+                                <div class="cubes-capabilities__info">
+                                    <span class="cubes-capabilities__title">
+                                        Реалистичные скины
+                                    </span>
+                                    <p class="cubes-capabilities__text">
+                                        Скины для кубиков были созданы в программе 3d
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cubes-capabilities__icon cubes-img_box">
+                            <img src="src/assets/images/png/CapabilitiesImage.png" alt="cub">
+                        </div>
+                    </div>
+                    <div class="cubes-capabilities__item">
+                        <div class="cubes-capabilities__drop">
+                            <div class="cubes-capabilities__data">
+                                <div class="cubes-capabilities__num">
+<!--                                    <img src="src/assets/images/svg/CapabilitiesNum.svg" alt="num">-->
+                                    02
+                                </div>
+                                <div class="cubes-capabilities__info">
+                                <span class="cubes-capabilities__title">
+                                    Настройки кубиков
+                                </span>
+                                    <p class="cubes-capabilities__text">
+                                        Настройте звук броска,
+                                        а также размер кубика
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cubes-capabilities__icon cubes-img_box">
+                            <img src="src/assets/images/png/CapabilitiesImageTwo.png" alt="cube">
+                        </div>
+                    </div>
+                    <div class="cubes-capabilities__item">
+                        <div class="cubes-capabilities__drop">
+                            <div class="cubes-capabilities__data">
+                                <div class="cubes-capabilities__num">
+<!--                                    <img src="src/assets/images/svg/CapabilitiesNum.svg" alt="num">-->
+                                    03
+                                </div>
+                                <div class="cubes-capabilities__info">
+                                <span class="cubes-capabilities__title">
+                                    Возможность выбора игры
+                                </span>
+                                    <p class="cubes-capabilities__text">
+                                        В приложении представлено большое количество игр
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cubes-capabilities__icon cubes-img_box">
+                            <img src="src/assets/images/png/CapabilitiesImageThree.png" alt="cub">
+                        </div>
+                    </div>
+                    <div class="cubes-capabilities__item">
+                        <div class="cubes-capabilities__drop">
+                            <div class="cubes-capabilities__data">
+                                <div class="cubes-capabilities__num">
+<!--                                    <img src="src/assets/images/svg/CapabilitiesNum.svg" alt="num">-->
+                                    04
+                                </div>
+                                <div class="cubes-capabilities__info">
+                                <span class="cubes-capabilities__title">
+                                    Настройка игры
+                                </span>
+                                    <p class="cubes-capabilities__text">
+                                        Кубики можно перебросить, убрать, и выбрать их количество
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cubes-capabilities__icon cubes-img_box">
+                            <img src="src/assets/images/png/CapabilitiesImageFour.png" alt="cub">
+                        </div>
+                    </div>
+                    <div class="cubes-capabilities__item">
+                        <div class="cubes-capabilities__drop">
+                            <div class="cubes-capabilities__data">
+                                <div class="cubes-capabilities__num">
+                                    05
+                                </div>
+                                <div class="cubes-capabilities__info">
+                                <span class="cubes-capabilities__title">
+                                    Доступно даже офлайн
+                                </span>
+                                    <p class="cubes-capabilities__text">
+                                        Приложение можно использовать без интернета
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cubes-capabilities__icon cubes-img_box">
+                            <img src="src/assets/images/png/CapabilitiesImageFive.png" alt="cub">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="cubes-skin">
+                <div class="cubes-skin__box cubes-section_box">
+                    <div class="cubes-skin__description cubes-description">
+                        <span class="cubes-description__name">
+                            Скины кубиков
+                        </span>
+                        <h2 class="cubes-description__heading">
+                            Дизайн был детально проработан и выполнен в 3D
+                        </h2>
+                        <p class="cubes-description__text">
+                            Здесь пример текста в 2 строчки, нужно что-то написать или придумать, просто пример текста в 2 строчки, нужно что-то написать или придумать
+                        </p>
+                    </div>
+                    <div class="cubes-skin__table">
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage2.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage3.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage4.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage5.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage6.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage7.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage8.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage9.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage10.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage11.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage12.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage13.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage14.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage15.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage16.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage17.png" alt="skin">
+                            </div>
+                        </div>
+                        <div class="cubes-skin__item">
+                            <div class="cubes-skin__image">
+                                <img src="src/assets/images/png/Skins/SkinImage18.png" alt="skin">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="cubes-technologies">
+                <div class="cubes-technologies__cube cubes-img_box cubes-technologies__cube_left translateOnMouseMove"
+                     data-animateSpeed="40"
+                >
+                    <img src="src/assets/images/png/Technology/CubeLeft.png" alt="cube">
+                </div>
+                <div class="cubes-technologies__cube cubes-img_box cubes-technologies__cube_center translateOnMouseMove"
+                     data-animateSpeed="60"
+                >
+                    <img src="src/assets/images/png/Technology/CubeCenter.png" alt="cube">
+                </div>
+                <div class="cubes-technologies__cube cubes-img_box cubes-technologies__cube_back translateOnMouseMove"
+                     data-animateSpeed="20"
+                >
+                    <img src="src/assets/images/png/Technology/CubeBack.png" alt="cube">
+                </div>
+                <div class="cubes-technologies__cube cubes-img_box cubes-technologies__cube_right translateOnMouseMove"
+                     data-animateSpeed="70"
+                >
+                    <img src="src/assets/images/png/Technology/CubeRight.png" alt="cube">
+                </div>
+                <div class="cubes-technologies__box cubes-section_box">
+                    <div class="cubes-technologies__description cubes-description">
+                        <span class="cubes-description__name">
+                            Программы и технологии
+                        </span>
+                        <h2 class="cubes-description__heading">
+                            Только лучшие  и современные программы
+                        </h2>
+                        <p class="cubes-description__text">
+                            Здесь пример текста в 2 строчки, нужно что-то написать или придумать, просто пример текста в 2 строчки, нужно что-то написать или придумать
+                        </p>
+                    </div>
+                    <div class="cubes-technologies__image cubes-img_box">
+                        <img src="src/assets/images/png/TechnologiesImage.png" alt="companies">
+                    </div>
+                </div>
+            </section>
+            <section class="cubes-reviews">
+                <div class="cubes-reviews__box cubes-section_box">
+                    <div class="cubes-reviews__description cubes-description">
+                        <span class="cubes-description__name">
+                            Отзыв заказчика
+                        </span>
+                        <h2 class="cubes-description__heading">
+                            Спасибо всей команде AppFox за отличное приложение!
+                        </h2>
+                        <p class="cubes-description__text">
+                            Сотрудничество АНО «БЕЛЫЙ МАЯК» с компанией «АРРРОХ» началось в апреле 2019 года. Необходимо было в сжатые сроки создать мультипликационный материал и игровое мобильное приложение. За время работы сотрудники компании показали высокий профессионализм, постоянное стремление к конструктивному диалогу, оптимизации временных и материальных затрат.
+                            <br>
+                            Отдельную благодарность хотели бы выразить руководителю компании Богаткину Вячеславу Владимировичу за активное участие в рабочем процессе, личную открытость и инициативу. Безусловно, при таком уровне выстроенного взаимодействия наше сотрудничество будет продолжено и при реализации следующих проектов.
+                        </p>
+                    </div>
+                    <div class="cubes-reviews__image cubes-img_box">
+                        <img src="src/assets/images/png/ReviewsImage.png" alt="smartphones">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="cubes-footer">
+            <div class="cubes-footer__box cubes-section_box">
+                <div class="cubes-footer__cube cubes-img_box cubes-footer__cube_top translateOnMouseMove"
+                     data-animateSpeed="70"
+                >
+                    <img src="src/assets/images/png/Footer/CubeTop.png" alt="cube">
+                </div>
+                <div class="cubes-footer__cube cubes-img_box cubes-footer__cube_middle translateOnMouseMove"
+                     data-animateSpeed="50"
+                >
+                    <img src="src/assets/images/png/Footer/CubeMiddle.png" alt="cube">
+                </div>
+                <div class="cubes-footer__cube cubes-img_box cubes-footer__cube_back translateOnMouseMove"
+                     data-animateSpeed="30"
+                >
+                    <img src="src/assets/images/png/Footer/CubeBack.png" alt="cube">
+                </div>
+                <div class="cubes-footer__cube cubes-img_box cubes-footer__cube_bottom translateOnMouseMove"
+                     data-animateSpeed="30"
+                >
+                    <img src="src/assets/images/png/Footer/CubeBottom.png" alt="cube">
+                </div>
+                <div class="cubes-footer__description">
+                    <div class="cubes-reviews__description cubes-description">
+                        <span class="cubes-description__name">
+                            С радостью Вам поможем
+                        </span>
+                        <h2 class="cubes-description__heading">
+                            Реализуем Вашу любую идею в реальность
+                        </h2>
+                        <p class="cubes-description__text">
+                            Расскажите, пожалуйста, о целях, задачах, сроках и бюджете проекта, как можно подробнее.
+                            <br><br>
+                            Техническое задание на разработку (хотя бы в общем виде) поможет нам разобраться в проекте и сделать вам предложение намного быстрее.
+                        </p>
+                    </div>
+
+                    <div class="cubes-footer__contacts">
+                        <a href="mailto:info@appfox.ru" class="cubes-footer__link">
+                            <div class="cubes-footer__icon cubes-img_box">
+                                <img src="src/assets/images/svg/MailIcon.svg" alt="@">
+                            </div>
+                            <span class="cubes-footer__address">
+                                info@appfox.ru
+                            </span>
+                        </a>
+                        <a href="tel:8 (800) 551-30-75" class="cubes-footer__link">
+                            <div class="cubes-footer__icon cubes-img_box">
+                                <img src="src/assets/images/svg/PhoneIcon.svg" alt="phone">
+                            </div>
+                            <span class="cubes-footer__address">
+                                8 (800) 551-30-75
+                            </span>
+                        </a>
+                    </div>
+
+                    <button class="cubes-button">
+                        Оставить заявку
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="src/scripts/main.js"></script>
 </body>
 </html>

@@ -8,6 +8,11 @@ function html() {
         .pipe(dest('./dist/'))
 }
 
+function script() {
+    return src('./src/scripts/*.js')
+        .pipe(dest('./dist/src/scripts/'))
+}
+
 function css() {
     return src('./src/styles/*.scss')
         .pipe(sass().on('error', sass.logError))
@@ -38,6 +43,7 @@ function serve() {
     })
 
     watch('src/*.html', series(html)).on('change', sync.reload)
+    watch('src/scripts/*.js', series(script)).on('change', sync.reload)
     watch('src/styles/*.scss', series(css)).on('change', sync.reload)
     watch('./src/assets/images/png/**/*.png', series(images)).on('change', sync.reload)
     watch('./src/assets/images/svg/**/*.svg', series(images)).on('change', sync.reload)
@@ -46,5 +52,5 @@ function serve() {
 }
 
 exports.build = series(clear, html, css)
-exports.serve = series(clear, html, css, fonts, images, serve)
+exports.serve = series(clear, html, css, fonts, images, script, serve)
 exports.clear = clear;

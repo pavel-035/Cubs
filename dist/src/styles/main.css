@@ -1,0 +1,1383 @@
+/*
+  FONT WEIGHT TABLE
+
+  100: Thin (Hairline)
+  200: Extra Light (Ultra Light)
+  300: Light
+  400: Regular
+  500: Medium
+  600: Semi Bold (Demi Bold)
+  700: Bold
+  800: Extra Bold (Ultra Bold)
+  900: Black (Heavy)
+ */
+@font-face {
+  font-family: "Ubuntu Medium";
+  src: url("../assets/fonts/Ubuntu/Ubuntu-Medium.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Ubuntu Bold";
+  src: url("../assets/fonts/Ubuntu/Ubuntu-Bold.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../assets/fonts/Ubuntu/Ubuntu-Regular.ttf") format("opentype");
+}
+.cubes-img_box {
+  font-size: 0;
+}
+.cubes-img_box img {
+  width: 100%;
+}
+
+.cubes-section_box {
+  max-width: 1678px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.cubes-description__name {
+  font-size: 18px;
+  color: #666666;
+  line-height: 27px;
+  font-weight: 500;
+  font-family: "Ubuntu Medium";
+}
+.cubes-description__name_light {
+  color: #C0C0C0;
+}
+.cubes-description__heading {
+  font-size: 36px;
+  color: #212EB4;
+  line-height: 34px;
+  font-weight: 700;
+  font-family: "Ubuntu Bold";
+  margin: 58px 0 21px;
+}
+.cubes-description__heading_light {
+  font-size: 34px;
+  color: #fff;
+  line-height: 51px;
+  font-weight: 700;
+  font-family: "Ubuntu Bold";
+  letter-spacing: -0.01em;
+  margin: 50px 0 13px;
+}
+.cubes-description__text {
+  font-size: 18px;
+  color: #2A3240;
+  line-height: 27px;
+  font-weight: 400;
+  font-family: "Ubuntu";
+  margin: 0;
+}
+.cubes-description__text_light {
+  color: #fff;
+}
+
+.cubes-button {
+  font-size: 18px;
+  color: #212EB4;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: "Ubuntu Medium";
+  padding: 22px 88px;
+  background: none;
+  border: 1px solid #212EB4;
+  box-sizing: border-box;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.cubes-button:hover {
+  background: #212EB4;
+  color: #fff;
+  transition: 0.7s;
+}
+
+body {
+  margin: 0;
+}
+
+.cubes-wrapper {
+  background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.cubes-header {
+  position: relative;
+  height: 42.1vw;
+}
+.cubes-header__image {
+  position: absolute;
+  top: 0.4%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.cubes-header__image_mini {
+  display: none;
+}
+.cubes-header__image_laptop {
+  display: none;
+}
+.cubes-header__cube {
+  position: absolute;
+  z-index: 10;
+}
+.cubes-header__cube_left {
+  top: 6%;
+  left: -5%;
+}
+.cubes-header__cube_right {
+  top: 25%;
+  right: -3%;
+}
+
+.cubes-about {
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  padding: 90px 0 83px;
+}
+.cubes-about__box {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cubes-about__figures {
+  position: relative;
+  max-width: 833px;
+  width: 100%;
+  min-height: 335px;
+  margin: 0 auto;
+}
+.cubes-about__image {
+  width: 1455px;
+  position: absolute;
+  top: 9%;
+  right: -42%;
+  z-index: 10;
+}
+.cubes-about__image_mini {
+  display: none;
+}
+.cubes-about__image_laptop {
+  display: none;
+}
+.cubes-about__cube {
+  position: absolute;
+  z-index: 15;
+}
+.cubes-about__cube_left {
+  top: 40%;
+  right: 70%;
+  z-index: 5;
+}
+.cubes-about__cube_middle {
+  top: 21%;
+  right: 29%;
+}
+.cubes-about__cube_right {
+  top: 35%;
+  right: -16%;
+}
+.cubes-about__description {
+  max-width: 785px;
+  width: 100%;
+}
+.cubes-about__list {
+  margin: 29px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.cubes-about__item {
+  font-size: 18px;
+  color: #2A3240;
+  line-height: 21px;
+  font-weight: 400;
+  font-family: "Ubuntu";
+  margin: 16px 0;
+  padding-left: 25px;
+  position: relative;
+}
+.cubes-about__item::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border: 5px solid #212EB4;
+  border-radius: 50%;
+  position: absolute;
+  top: 16%;
+  left: 0;
+}
+
+.cubes-interface {
+  padding: 104px 0 259px;
+  background: linear-gradient(180deg, #FFFFFF 72.15%, #0A0623 100%);
+}
+.cubes-interface__description {
+  max-width: 783px;
+  width: 100%;
+}
+
+.cubes-fonts {
+  background: url("../assets/images/png/FontsBackground.png") no-repeat 50% 50%/cover;
+  padding: 0 0 179px;
+}
+.cubes-fonts__gallery {
+  position: relative;
+  z-index: 0;
+  transform: translateY(-31%);
+}
+.cubes-fonts__hand {
+  position: absolute;
+  top: -36%;
+  right: -1%;
+  z-index: -1;
+}
+.cubes-fonts__hand_finger {
+  z-index: 1;
+}
+.cubes-fonts__screens {
+  max-width: 1920px;
+  width: 100%;
+  overflow: hidden;
+}
+.cubes-fonts__carousel {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  width: 9999px;
+  animation: ticker linear infinite 60s;
+}
+.cubes-fonts__carousel:hover {
+  animation-play-state: paused;
+}
+.cubes-fonts__element {
+  display: inline-block;
+  margin: 0 10px;
+}
+.cubes-fonts__screen {
+  max-width: 229px;
+  width: 100%;
+}
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.cubes-fonts__box {
+  position: relative;
+}
+.cubes-fonts__colors {
+  position: absolute;
+  bottom: -43%;
+  right: -3%;
+  z-index: 10;
+}
+.cubes-fonts__color {
+  display: inline-block;
+  max-width: 168px;
+  width: 100%;
+  margin: 0 20px;
+}
+.cubes-fonts__animate {
+  animation: toTop linear 5s;
+}
+@keyframes toTop {
+  0% {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+.cubes-fonts__cube {
+  position: absolute;
+  z-index: 10;
+}
+.cubes-fonts__cube_left {
+  top: 37%;
+  right: 42%;
+}
+.cubes-fonts__cube_middle {
+  top: 81%;
+  right: 23%;
+}
+.cubes-fonts__cube_back {
+  top: 50%;
+  right: 16%;
+}
+.cubes-fonts__cube_right {
+  top: 79%;
+  right: -3%;
+}
+.cubes-fonts__description {
+  max-width: 869px;
+  width: 100%;
+}
+.cubes-fonts__font {
+  font-size: 68px;
+  color: #fff;
+  line-height: 78px;
+  font-weight: 700;
+  font-family: "Ubuntu Bold";
+  position: relative;
+  z-index: 0;
+  margin-top: 194px;
+}
+.cubes-fonts__font::before {
+  content: "";
+  background: url("../assets/images/svg/FontImage.svg") no-repeat 50% 50%;
+  width: 579px;
+  height: 341px;
+  position: absolute;
+  top: -56%;
+  left: -18.4%;
+  z-index: -1;
+}
+
+.cubes-capabilities {
+  background: #fff;
+  padding: 115px 0 330px;
+  position: relative;
+  z-index: 0;
+}
+.cubes-capabilities__description {
+  max-width: 1024px;
+  width: 100%;
+}
+.cubes-capabilities__cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 362px;
+}
+.cubes-capabilities__item {
+  position: relative;
+}
+.cubes-capabilities__item:nth-child(2n) .cubes-capabilities__data {
+  border-bottom: none;
+  border-top: 1px solid #212EB4;
+}
+.cubes-capabilities__item:nth-child(2n) .cubes-capabilities__data::after {
+  bottom: auto;
+  top: -46px;
+}
+.cubes-capabilities__item:nth-child(2n) .cubes-capabilities__drop {
+  top: 100%;
+  transform: translate(50%, 60%);
+}
+.cubes-capabilities__drop {
+  position: absolute;
+  top: -100%;
+  right: 50%;
+  transform: translate(50%, -60%);
+  width: max-content;
+}
+.cubes-capabilities__data {
+  max-width: 393px;
+  padding: 14px 0;
+  border-bottom: 1px solid #212EB4;
+  font-size: 0;
+}
+.cubes-capabilities__data::after {
+  content: "";
+  position: absolute;
+  bottom: -46px;
+  right: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 1px;
+  height: 46px;
+  margin: 0 auto;
+  background: #212EB4;
+}
+.cubes-capabilities__num {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 104px;
+  color: #212EB4;
+  line-height: 104px;
+  font-weight: 900;
+  font-family: "Ubuntu";
+  letter-spacing: -0.5rem;
+}
+.cubes-capabilities__info {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+  max-width: 271px;
+  width: 100%;
+}
+.cubes-capabilities__title {
+  font-size: 20px;
+  color: #2A3240;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: "Ubuntu Medium";
+}
+.cubes-capabilities__text {
+  font-size: 16px;
+  color: #2A3240;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "Ubuntu";
+  margin: 7px 0 0;
+}
+.cubes-capabilities__icon {
+  display: block;
+  max-width: 137px;
+  width: 100%;
+  margin: 0 60px;
+  filter: drop-shadow(-4px 31px 40px rgba(26, 26, 33, 0.3));
+}
+.cubes-capabilities__icon img {
+  width: auto;
+}
+
+.cubes-skin {
+  padding: 145px 0 176px;
+  background: url("../assets/images/png/SkinBackground.png") no-repeat 50% 50%/cover;
+}
+.cubes-skin .cubes-description__text {
+  max-width: 783px;
+  width: 100%;
+}
+.cubes-skin__table {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 89px;
+}
+.cubes-skin__item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 13px 0;
+  border: 1px solid #B1BDD6;
+  width: calc(16.6666666667% - 2px);
+  max-height: 149px;
+}
+.cubes-skin__image {
+  filter: drop-shadow(-4px 31px 40px rgba(26, 26, 33, 0.3));
+}
+
+.cubes-technologies {
+  background: url("../assets/images/png/TechnologiesBackground.png") no-repeat 50% 50%/cover;
+  padding: 130px 0 97px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.cubes-technologies__image {
+  max-width: 846px;
+  width: 100%;
+  margin: 48px auto 0;
+  transform: translateX(-4%);
+}
+.cubes-technologies__cube {
+  position: absolute;
+  z-index: 10;
+}
+.cubes-technologies__cube_center {
+  top: 68%;
+  right: 63%;
+}
+.cubes-technologies__cube_left {
+  top: 55%;
+  right: 73%;
+}
+.cubes-technologies__cube_back {
+  top: 29%;
+  right: 21%;
+}
+.cubes-technologies__cube_right {
+  top: 15%;
+  right: -5%;
+}
+
+.cubes-reviews {
+  padding: 167px 0;
+}
+.cubes-reviews__box {
+  position: relative;
+}
+.cubes-reviews__description {
+  max-width: 1013px;
+  width: 100%;
+}
+.cubes-reviews__image {
+  max-width: 796px;
+  width: 100%;
+  position: absolute;
+  top: -92%;
+  right: -6%;
+}
+
+.cubes-footer {
+  padding: 113px 0;
+  background: #FFFFFF;
+}
+.cubes-footer__box {
+  position: relative;
+  z-index: 0;
+}
+.cubes-footer__cube {
+  position: absolute;
+  z-index: 10;
+}
+.cubes-footer__cube_top {
+  top: -59%;
+  right: 12%;
+}
+.cubes-footer__cube_middle {
+  top: -6%;
+  right: 22%;
+}
+.cubes-footer__cube_back {
+  top: 17%;
+  right: 13%;
+}
+.cubes-footer__cube_bottom {
+  top: 50%;
+  right: 2%;
+}
+.cubes-footer__description {
+  max-width: 1013px;
+  width: 100%;
+}
+.cubes-footer .cubes-description__heading {
+  margin: 62px 0 21px;
+}
+.cubes-footer__contacts {
+  margin: 56px 0 35px;
+}
+.cubes-footer__link {
+  display: inline-block;
+  font-size: 0;
+  text-decoration: none;
+  margin-right: 91px;
+}
+.cubes-footer__link:last-child {
+  margin-right: 0;
+}
+.cubes-footer__icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 47px;
+  margin-right: 21px;
+}
+.cubes-footer__address {
+  font-size: 24px;
+  color: #212EB4;
+  line-height: 40px;
+  font-weight: 500;
+  font-family: "Ubuntu Medium";
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 1024px) {
+  .cubes-section_box {
+    max-width: 720px;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  .cubes-description__name {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cubes-description__heading {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 30px 0 10px;
+  }
+  .cubes-description__heading_light {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 30px 0 10px;
+  }
+  .cubes-description__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .cubes-button {
+    font-size: 17px;
+    line-height: 27px;
+    padding: 13px 71px;
+  }
+  .cubes-button:hover {
+    background: none;
+    color: #212EB4;
+  }
+
+  .cubes-header {
+    height: 57.1vw;
+  }
+  .cubes-header__image {
+    display: none;
+  }
+  .cubes-header__image_laptop {
+    display: block;
+    top: 0.1%;
+  }
+  .cubes-header__cube {
+    position: absolute;
+    z-index: 10;
+  }
+  .cubes-header__cube_left {
+    width: 93px;
+    top: 10%;
+    left: -5%;
+  }
+  .cubes-header__cube_right {
+    width: 68px;
+    top: 20%;
+    right: -2%;
+  }
+
+  .cubes-about {
+    padding: 65px 0 10px;
+  }
+  .cubes-about__figures {
+    max-width: 833px;
+    width: 100%;
+    min-height: 220px;
+    margin: 70px auto 0;
+  }
+  .cubes-about__image {
+    display: none;
+  }
+  .cubes-about__image_laptop {
+    display: block;
+    width: 974px;
+    transform: translateX(-29.9%);
+    top: -7%;
+    right: -17%;
+    position: inherit;
+  }
+  .cubes-about__cube {
+    display: none;
+  }
+  .cubes-about__item {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 20px 0;
+  }
+
+  .cubes-interface {
+    padding: 65px 0 259px;
+  }
+  .cubes-interface__description {
+    max-width: inherit;
+  }
+
+  .cubes-fonts {
+    padding: 0 0 268px;
+  }
+  .cubes-fonts__screens {
+    transform: translateY(-31%);
+    position: relative;
+    z-index: 0;
+    height: 214px;
+  }
+  .cubes-fonts__hand {
+    width: 223px;
+    position: absolute;
+    top: -87%;
+    right: 0%;
+    z-index: -1;
+  }
+  .cubes-fonts__hand_finger {
+    width: 127px;
+    top: -84%;
+    right: 0%;
+    z-index: 1;
+  }
+  .cubes-fonts__screen {
+    display: none;
+    margin: 0 8px;
+    width: 214px;
+  }
+  .cubes-fonts__colors {
+    display: none;
+    position: absolute;
+    bottom: -43%;
+    right: -5%;
+  }
+  .cubes-fonts__color {
+    display: inline-block;
+    max-width: 168px;
+    width: 100%;
+    margin: 0 20px;
+  }
+  @keyframes toTop {
+    0% {
+      -webkit-transform: translateY(50%);
+      transform: translateY(50%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+  }
+  .cubes-fonts__cube_left {
+    width: 48px;
+    top: auto;
+    right: 52%;
+    bottom: -42%;
+  }
+  .cubes-fonts__cube_middle {
+    width: 57px;
+    top: auto;
+    right: 30%;
+    bottom: -82%;
+  }
+  .cubes-fonts__cube_back {
+    width: 46px;
+    top: auto;
+    right: 23%;
+    bottom: -52%;
+  }
+  .cubes-fonts__cube_right {
+    width: 32px;
+    top: auto;
+    right: 3%;
+    bottom: -70%;
+  }
+  .cubes-fonts__description {
+    max-width: inherit;
+  }
+  .cubes-fonts__font {
+    font-size: 36px;
+    line-height: 41px;
+    margin-top: 66px;
+  }
+  .cubes-fonts__font::before {
+    top: 13%;
+    left: -37.8%;
+  }
+
+  .cubes-capabilities {
+    display: none;
+    background: none;
+    padding: 94px 0 330px;
+  }
+  .cubes-capabilities__description {
+    max-width: 1024px;
+    width: 100%;
+  }
+  .cubes-capabilities__cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 362px;
+  }
+  .cubes-capabilities__item {
+    position: relative;
+  }
+  .cubes-capabilities__item:nth-child(2n) .cubes-capabilities__data {
+    border-bottom: none;
+    border-top: 1px solid #212EB4;
+  }
+  .cubes-capabilities__item:nth-child(2n) .cubes-capabilities__data::after {
+    bottom: auto;
+    top: -46px;
+  }
+  .cubes-capabilities__item:nth-child(2n) .cubes-capabilities__drop {
+    top: 100%;
+    transform: translate(50%, 60%);
+  }
+  .cubes-capabilities__drop {
+    position: absolute;
+    top: -100%;
+    right: 50%;
+    transform: translate(50%, -60%);
+    width: max-content;
+  }
+  .cubes-capabilities__data {
+    max-width: 188px;
+    padding: 14px 0;
+    border-bottom: 1px solid #212EB4;
+    font-size: 0;
+  }
+  .cubes-capabilities__data::after {
+    content: "";
+    position: absolute;
+    bottom: -46px;
+    right: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 1px;
+    height: 46px;
+    margin: 0 auto;
+    background: #212EB4;
+  }
+  .cubes-capabilities__num {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 104px;
+    color: #212EB4;
+    line-height: 104px;
+    font-weight: 900;
+    font-family: "Ubuntu";
+    letter-spacing: -0.5rem;
+  }
+  .cubes-capabilities__info {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+    max-width: 128px;
+  }
+  .cubes-capabilities__title {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .cubes-capabilities__text {
+    font-size: 10px;
+    line-height: 15px;
+    margin: 2px 0 0;
+  }
+  .cubes-capabilities__icon {
+    max-width: 137px;
+    margin: 0 60px;
+  }
+  .cubes-capabilities__icon img {
+    width: 100%;
+  }
+
+  .cubes-skin {
+    display: none;
+    padding: 145px 0 176px;
+    background: url("../assets/images/png/SkinBackground.png") no-repeat 50% 50%/cover;
+  }
+  .cubes-skin .cubes-description__text {
+    max-width: 783px;
+    width: 100%;
+  }
+  .cubes-skin__table {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 89px;
+  }
+  .cubes-skin__item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 13px 0;
+    border: 1px solid #B1BDD6;
+    width: calc(16.6666666667% - 2px);
+    max-height: 149px;
+  }
+  .cubes-skin__image {
+    filter: drop-shadow(-4px 31px 40px rgba(26, 26, 33, 0.3));
+  }
+
+  .cubes-technologies {
+    margin-top: 1245px;
+    padding: 65px 0 90px;
+    z-index: 0;
+  }
+  .cubes-technologies__image {
+    max-width: 435px;
+    width: 100%;
+    margin: 65px auto 0;
+  }
+  .cubes-technologies__cube_center {
+    width: 101px;
+    top: 70%;
+    right: 65%;
+  }
+  .cubes-technologies__cube_left {
+    width: 123px;
+    top: 40%;
+    right: 93%;
+  }
+  .cubes-technologies__cube_back {
+    display: none;
+  }
+  .cubes-technologies__cube_right {
+    width: 71px;
+    top: 6%;
+    right: -3%;
+  }
+
+  .cubes-reviews {
+    padding: 65px 0 75px;
+  }
+  .cubes-reviews__description {
+    max-width: inherit;
+  }
+  .cubes-reviews__image {
+    display: none;
+  }
+
+  .cubes-footer {
+    padding: 64px 0 64px;
+  }
+  .cubes-footer__cube_top {
+    width: 184px;
+    top: 4%;
+    right: -3%;
+  }
+  .cubes-footer__cube_middle {
+    width: 170px;
+    top: 37%;
+    right: 12%;
+  }
+  .cubes-footer__cube_back {
+    width: 112px;
+    top: 50%;
+    right: -3%;
+  }
+  .cubes-footer__cube_bottom {
+    width: 434px;
+    top: 70%;
+    right: -17%;
+  }
+  .cubes-footer__description {
+    max-width: 444px;
+  }
+  .cubes-footer .cubes-description__heading {
+    margin: 32px 0 31px;
+  }
+  .cubes-footer__contacts {
+    margin: 30px 0 30px;
+  }
+  .cubes-footer__link {
+    margin-right: 61px;
+  }
+  .cubes-footer__icon {
+    width: 35px;
+    margin-right: 15px;
+  }
+  .cubes-footer__address {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .cubes-section_box {
+    max-width: 1618px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .cubes-description__name {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .cubes-description__heading {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 29px 0 14px;
+  }
+  .cubes-description__heading_light {
+    font-size: 18px;
+    line-height: 27px;
+    margin: 29px 0 11px;
+  }
+  .cubes-description__text {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .cubes-button {
+    font-size: 15px;
+    line-height: 16px;
+    padding: 18px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .cubes-wrapper {
+    background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .cubes-header {
+    height: 69.1vw;
+  }
+  .cubes-header__image {
+    display: none;
+  }
+  .cubes-header__image_mini {
+    display: block;
+  }
+  .cubes-header__cube {
+    display: none;
+  }
+
+  .cubes-about {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    padding: 62px 15px 40px;
+  }
+  .cubes-about__figures {
+    max-width: 290px;
+    min-height: 140px;
+    margin: 0 auto 0;
+  }
+  .cubes-about__image {
+    display: none;
+  }
+  .cubes-about__image img {
+    width: 100%;
+  }
+  .cubes-about__image_mini {
+    display: block;
+    width: 620px;
+    top: auto;
+    bottom: -36%;
+    left: -62%;
+  }
+  .cubes-about__image_laptop {
+    display: none;
+  }
+  .cubes-about__description {
+    max-width: inherit;
+  }
+  .cubes-about__list {
+    margin: 29px 0 0;
+  }
+  .cubes-about__item {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 20px 0;
+  }
+
+  .cubes-interface {
+    padding: 61px 15px 259px;
+    background: linear-gradient(180deg, #FFFFFF 72.15%, #0A0623 100%);
+  }
+  .cubes-interface__description {
+    max-width: inherit;
+  }
+
+  .cubes-fonts {
+    background: url("../assets/images/png/FontsBackground.png") no-repeat 50% 50%/cover;
+    padding: 130px 15px 161px;
+  }
+  .cubes-fonts__screens {
+    display: none;
+    transform: translateY(-31%);
+    position: relative;
+    z-index: 0;
+  }
+  .cubes-fonts__hand {
+    position: absolute;
+    top: -38%;
+    right: -1%;
+    z-index: -1;
+  }
+  .cubes-fonts__hand_finger {
+    top: -38%;
+    right: -1%;
+    z-index: 1;
+  }
+  .cubes-fonts__screen {
+    margin: 0 8px;
+    width: 239px;
+  }
+  @keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  .cubes-fonts__box {
+    position: relative;
+  }
+  .cubes-fonts__colors {
+    position: absolute;
+    bottom: -43%;
+    right: -5%;
+  }
+  .cubes-fonts__color {
+    display: none;
+    max-width: 168px;
+    width: 100%;
+    margin: 0 20px;
+  }
+  .cubes-fonts__animate {
+    animation: toTop linear 5s;
+  }
+  @keyframes toTop {
+    0% {
+      -webkit-transform: translateY(50%);
+      transform: translateY(50%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+  }
+  .cubes-fonts__cube {
+    top: auto;
+  }
+  .cubes-fonts__cube_left {
+    width: 34px;
+    right: 77%;
+    bottom: -19%;
+  }
+  .cubes-fonts__cube_middle {
+    width: 37px;
+    right: 38%;
+    bottom: -51%;
+  }
+  .cubes-fonts__cube_back {
+    width: 18px;
+    right: 36%;
+    bottom: -25%;
+  }
+  .cubes-fonts__cube_right {
+    width: 26px;
+    right: -4%;
+    bottom: -43%;
+  }
+  .cubes-fonts__description {
+    max-width: inherit;
+  }
+  .cubes-fonts__font {
+    position: relative;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 35px;
+  }
+  .cubes-fonts__font::before {
+    background: url("../assets/images/svg/mini/FontImage.svg") no-repeat 50% 50%;
+    width: 233px;
+    height: 138px;
+    top: 235%;
+    bottom: -229%;
+    left: -25.4%;
+  }
+
+  .cubes-capabilities {
+    background: none;
+    padding: 81px 15px;
+  }
+  .cubes-capabilities__description {
+    max-width: 1024px;
+    width: 100%;
+  }
+  .cubes-capabilities__cards {
+    display: block;
+    margin-top: 138px;
+  }
+  .cubes-capabilities__item {
+    position: relative;
+  }
+  .cubes-capabilities__item:nth-child(2n) .cubes-capabilities__data {
+    border-bottom: 1px solid #212EB4;
+    border-top: none;
+  }
+  .cubes-capabilities__item:nth-child(2n) .cubes-capabilities__data::after {
+    bottom: -21px;
+    top: auto;
+  }
+  .cubes-capabilities__item:nth-child(2n) .cubes-capabilities__drop {
+    top: -100%;
+    right: 50%;
+    transform: translate(50%, -44%);
+  }
+  .cubes-capabilities__drop {
+    position: absolute;
+    top: -100%;
+    right: 50%;
+    transform: translate(50%, -44%);
+    width: max-content;
+  }
+  .cubes-capabilities__data {
+    max-width: inherit;
+    padding: 5px 10px;
+    box-sizing: border-box;
+  }
+  .cubes-capabilities__data::after {
+    bottom: -21px;
+    height: 21px;
+  }
+  .cubes-capabilities__num {
+    font-size: 57px;
+    line-height: 62px;
+    letter-spacing: 0rem;
+  }
+  .cubes-capabilities__info {
+    max-width: 185px;
+    margin-left: 7px;
+  }
+  .cubes-capabilities__title {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .cubes-capabilities__text {
+    font-size: 10px;
+    line-height: 15px;
+    margin: 3px 0 0;
+  }
+  .cubes-capabilities__icon {
+    display: block;
+    max-width: 63px;
+    margin: 116px auto;
+    filter: drop-shadow(-1.8158px 14.0724px 18.158px rgba(26, 26, 33, 0.3));
+  }
+  .cubes-capabilities__icon img {
+    width: 100%;
+  }
+
+  .cubes-skin {
+    display: none;
+    padding: 145px 0 176px;
+    background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%), #EADDF9;
+    mix-blend-mode: normal;
+    backdrop-filter: blur(15px);
+  }
+  .cubes-skin .cubes-description__text {
+    max-width: 783px;
+    width: 100%;
+  }
+  .cubes-skin__table {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 89px;
+  }
+  .cubes-skin__item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 13px 0;
+    border: 1px solid #B1BDD6;
+    width: calc(16.6666666667% - 2px);
+    max-height: 149px;
+  }
+  .cubes-skin__image {
+    filter: drop-shadow(-4px 31px 40px rgba(26, 26, 33, 0.3));
+  }
+
+  .cubes-technologies {
+    padding: 62px 15px 61px;
+  }
+  .cubes-technologies__image {
+    width: 326px;
+    margin: 31px auto 0;
+    transform: translateX(-7%);
+  }
+  .cubes-technologies__cube_center {
+    width: 65px;
+    top: 89%;
+    right: -7%;
+  }
+  .cubes-technologies__cube_left {
+    width: 82px;
+    top: 78%;
+    right: 79%;
+  }
+  .cubes-technologies__cube_back {
+    display: none;
+  }
+  .cubes-technologies__cube_right {
+    width: 56px;
+    top: -3%;
+    right: -5%;
+  }
+
+  .cubes-reviews {
+    padding: 61px 15px 69px;
+  }
+  .cubes-reviews__box {
+    position: relative;
+  }
+  .cubes-reviews__description {
+    max-width: inherit;
+  }
+  .cubes-reviews__image {
+    display: none;
+  }
+
+  .cubes-footer {
+    padding: 61px 15px 100px;
+  }
+  .cubes-footer__box {
+    position: relative;
+    z-index: 0;
+  }
+  .cubes-footer__cube {
+    position: absolute;
+    z-index: 10;
+  }
+  .cubes-footer__cube_top {
+    width: 118px;
+    top: -30%;
+    right: -17%;
+  }
+  .cubes-footer__cube_middle {
+    width: 95px;
+    top: -24%;
+    right: 88%;
+  }
+  .cubes-footer__cube_back {
+    width: 76px;
+    top: 68%;
+    right: -13%;
+  }
+  .cubes-footer__cube_bottom {
+    width: 281px;
+    top: 96%;
+    right: 1%;
+  }
+  .cubes-footer__description {
+    max-width: 1013px;
+    width: 100%;
+  }
+  .cubes-footer .cubes-description__heading {
+    margin: 30px 0 31px;
+  }
+  .cubes-footer .cubes-description__text {
+    line-height: 26px;
+  }
+  .cubes-footer__contacts {
+    margin: 0 0 31px;
+  }
+  .cubes-footer__link {
+    display: block;
+    font-size: 0;
+    text-decoration: none;
+    margin-right: 0;
+    margin-top: 13px;
+  }
+  .cubes-footer__icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 26px;
+    margin-right: 7px;
+  }
+  .cubes-footer__address {
+    font-size: 14px;
+    line-height: 16px;
+    vertical-align: middle;
+  }
+}

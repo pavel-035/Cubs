@@ -13,11 +13,3 @@ window.addEventListener('mousemove', function (e) {
         });
     }
 })
-
-// carousel
-// const carousel = document.getElementById('carousel')
-// const carouselElements = carousel.querySelectorAll('.cubes-fonts__element')
-//
-// let cloneElement = carousel.
-//
-// console.log(carouselElements);

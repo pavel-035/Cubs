@@ -61,7 +61,7 @@ $uniqueColor: #212EB4;
   }
   &__heading {
     @include font($uniqueColor, 36px, 34px, 700, "Ubuntu Bold");
-    margin: 58px 0 21px;
+    margin: 61px 0 21px;
     &_light {
       @include font(#fff, 34px, 51px, 700, "Ubuntu Bold");
       letter-spacing: -0.01em;
@@ -137,7 +137,7 @@ body {
 
 .cubes-about {
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-  padding: 90px 0 83px;
+  padding: 93px 0 83px;
   &__box {
     position: relative;
     z-index: 1;
@@ -217,7 +217,7 @@ body {
 }
 
 .cubes-interface {
-  padding: 104px 0 259px;
+  padding: 104px 0 250px;
   background: linear-gradient(180deg, #FFFFFF 72.15%, #0A0623 100%);
   &__description {
     max-width: 783px;
@@ -227,13 +227,14 @@ body {
 
 .cubes-fonts {
   background: url("../assets/images/png/FontsBackground.png") no-repeat 50% 50%/cover;
-  padding: 0 0 179px;
+  padding: 0;
 
   &__gallery {
     position: relative;
     z-index: 0;
 
-    transform: translateY(-31%);
+    transform: translateY(-26%);
+    margin-top: -15px;
   }
   &__hand {
     position: absolute;
@@ -256,7 +257,8 @@ body {
     font-size: 0;
     width: 9999px;
 
-    animation: ticker linear infinite 60s;
+    transform: translateX(-0.3%);
+    //animation: ticker linear infinite 60s;
     &:hover {
       animation-play-state: paused;
     }
@@ -266,7 +268,7 @@ body {
     margin: 0 10px;
   }
   &__screen {
-    max-width: 229px;
+    max-width: 236px;
     width: 100%;
   }
   @keyframes ticker {
@@ -284,19 +286,62 @@ body {
 
   &__box {
     position: relative;
+
+    max-width: 1751px;
+    width: 100%;
+    margin: 0 54px 0 auto;
+    padding: 0 35px;
+    box-sizing: border-box;
+  }
+
+  &__example {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 33px 0 0;
+  }
+  &__font {
+    @include font(#fff, 68px, 78px, 700, "Ubuntu Bold");
+
+    max-width: 680px;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+
+      background: url("../assets/images/svg/FontImage.svg") no-repeat 50% 50%;
+      width: 579px;
+      height: 341px;
+
+      position: absolute;
+      top: -56%;
+      left: -43.4%;
+      z-index: -1;
+    }
   }
 
   &__colors {
-    position: absolute;
-    bottom: -43%;
-    right: -3%;
+    position: relative;
     z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    max-width: 831px;
+    width: 100%;
+    transform: translateY(3%);
   }
   &__color {
-    display: inline-block;
     max-width: 168px;
     width: 100%;
-    margin: 0 20px;
+    margin: 0 21px;
+
+    box-shadow: -4px 31px 40px rgba(26, 26, 33, 0.3);
+    border-radius: 3px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
   &__animate {
     animation: toTop linear 5s;
@@ -318,51 +363,32 @@ body {
     position: absolute;
     z-index: 10;
     &_left {
-      top: 37%;
-      right: 42%;
+      width: 5.938vw;
+      top: -8%;
+      left: -3%;
     }
     &_middle {
-      top: 81%;
-      right: 23%;
+      width: 6.406vw;
+      top: 37%;
+      right: 51%;
     }
     &_back {
-      top: 50%;
-      right: 16%;
+      width: 5.208vw;
+      top: 5%;
+      right: 38%;
     }
     &_right {
-      top: 79%;
-      right: -3%;
-    }
-  }
-
-  &__description {
-    max-width: 869px;
-    width: 100%;
-  }
-  &__font {
-    @include font(#fff, 68px, 78px, 700, "Ubuntu Bold");
-
-    position: relative;
-    z-index: 0;
-    margin-top: 194px;
-    &::before {
-      content: "";
-
-      background: url("../assets/images/svg/FontImage.svg") no-repeat 50% 50%;
-      width: 579px;
-      height: 341px;
-
-      position: absolute;
-      top: -56%;
-      left: -18.4%;
-      z-index: -1;
+      width: 3.229vw;
+      top: 34%;
+      right: 0%;
     }
   }
 }
 
 .cubes-capabilities {
+  display: none;
   background: #fff;
-  padding: 115px 0 330px;
+  padding: 110px 0 330px;
   position: relative;
   z-index: 0;
   &__description {
@@ -372,10 +398,11 @@ body {
   &__cards {
     display: flex;
     justify-content: center;
-    margin-top: 362px;
+    margin-top: 357px;
   }
   &__item {
     position: relative;
+    margin: 0 60px;
     &:nth-child(2n) {
       .cubes-capabilities__data {
         border-bottom: none;
@@ -447,7 +474,7 @@ body {
     display: block;
     max-width: 137px;
     width: 100%;
-    margin: 0 60px;
+    margin: 0;
     filter: drop-shadow(-4px 31px 40px rgba(26, 26, 33, 0.3));
     img {
       width: auto;
@@ -458,12 +485,18 @@ body {
 .cubes-skin {
   padding: 145px 0 176px;
   background: url("../assets/images/png/SkinBackground.png") no-repeat 50% 50%/cover;
+  &__box {
+    max-width: 1690px;
+    padding: 0 35px;
+    box-sizing: border-box;
+  }
   .cubes-description__text {
     max-width: 783px;
     width: 100%;
   }
   &__table {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 89px;
   }
@@ -473,11 +506,10 @@ body {
     align-items: flex-start;
     padding: 13px 0;
     border: 1px solid #B1BDD6;
-    width: calc(100% / 6 - 2px);
+    max-width: 270px;
+    width: 100%;
     max-height: 149px;
-  }
-  &__image {
-    filter: drop-shadow(-4px 31px 40px rgba(26, 26, 33, 0.3));
+    margin: -1px;
   }
 }
 
@@ -487,42 +519,49 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 0;
+  &__description {
+    max-width: 781px;
+  }
   &__image {
+    position: relative;
     max-width: 846px;
     width: 100%;
-    margin: 48px auto 0;
+    margin: 21px auto 0;
     transform: translateX(-4%);
   }
   &__cube {
     position: absolute;
     z-index: 10;
-    &_center {
-      top: 68%;
-      right: 63%;
-    }
     &_left {
-      top: 55%;
-      right: 73%;
+      width: 162px;
+      top: 41%;
+      left: -19%;
+    }
+    &_center {
+      width: 213px;
+      top: 61%;
+      right: 76%;
     }
     &_back {
-      top: 29%;
-      right: 21%;
+      width: 161px;
+      top: -5%;
+      right: -18%;
     }
     &_right {
-      top: 15%;
-      right: -5%;
+      width: 350px;
+      top: -27%;
+      right: -79%;
+      z-index: -1;
     }
   }
 }
 
 .cubes-reviews {
-  padding: 167px 0;
-  &__box {
-    position: relative;
-  }
+  padding: 164px 0 170px;
   &__description {
     max-width: 1013px;
     width: 100%;
+    position: relative;
   }
   &__image {
     max-width: 796px;
@@ -530,7 +569,7 @@ body {
 
     position: absolute;
     top: -92%;
-    right: -6%;
+    right: -70%;
   }
 }
 
@@ -538,32 +577,12 @@ body {
   padding: 113px 0;
   background: #FFFFFF;
   &__box {
-    position: relative;
-    z-index: 0;
-  }
-  &__cube {
-    position: absolute;
-    z-index: 10;
-    &_top {
-      top: -59%;
-      right: 12%;
-    }
-    &_middle {
-      top: -6%;
-      right: 22%;
-    }
-    &_back {
-      top: 17%;
-      right: 13%;
-    }
-    &_bottom {
-      top: 50%;
-      right: 2%;
-    }
+    max-width: 1665px;
   }
   &__description {
     max-width: 1013px;
     width: 100%;
+    position: relative;
   }
   .cubes-description__heading {
     margin: 62px 0 21px;
@@ -590,9 +609,30 @@ body {
     @include font($uniqueColor, 24px, 40px, 500, "Ubuntu Medium");
     vertical-align: middle;
   }
+
+  &__cube {
+    position: absolute;
+    z-index: 10;
+    &_top {
+      top: -56%;
+      right: -40%;
+    }
+    &_middle {
+      top: -6%;
+      right: -25%;
+    }
+    &_back {
+      top: 17%;
+      right: -40%;
+    }
+    &_bottom {
+      top: 47%;
+      right: -57%;
+    }
+  }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 990px) {
   .cubes-section_box {
     max-width: 720px;
     padding: 0 30px;
@@ -689,56 +729,90 @@ body {
   }
 
   .cubes-interface {
-    padding: 65px 0 259px;
+    padding: 65px 0 243px;
+    background: linear-gradient(180deg, #FFFFFF 72.15%, #0A0623 100%);
     &__description {
       max-width: inherit;
     }
   }
 
   .cubes-fonts {
-    padding: 0 0 268px;
+    padding: 1px 0 0;
 
-    &__screens {
-      //display: flex;
-      transform: translateY(-31%);
-      position: relative;
-      z-index: 0;
-      height: 214px;
-      //animation-iteration-count: infinite;
-      //animation-timing-function: linear;
-      //animation-name: ticker;
-      //animation-duration: 30s;
+    &__gallery {
+      transform: translateY(-21%);
+      margin-top: -69px;
     }
     &__hand {
       width: 223px;
       position: absolute;
-      top: -87%;
+      top: -35%;
       right: 0%;
       z-index: -1;
       &_finger {
         width: 127px;
-        top: -84%;
-        right: 0%;
         z-index: 1;
       }
     }
+
+    &__screens {
+      max-width: 1920px;
+      width: 100%;
+      overflow: hidden;
+    }
+    &__carousel {
+      padding: 0;
+      margin: 0;
+      font-size: 0;
+      width: 9999px;
+
+      transform: translateX(-0.1%);
+      //animation: ticker linear infinite 60s;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+    &__element {
+      display: inline-block;
+      margin: 0 5px;
+    }
     &__screen {
-      display: none;
-      margin: 0 8px;
-      width: 214px;
+      width: 100%;
+      max-width: 136px;
+    }
+
+    &__box {
+      max-width: 720px;
+      margin: 0 auto 0;
+      padding: 0 20px 0 30px;
+    }
+
+    &__example {
+      display: block;
+
+      margin: 0;
+    }
+    &__font {
+      font-size: 36px;
+      line-height: 41px;
+
+      max-width: inherit;
+      margin-top: 66px;
+      &::before {
+        top: 17%;
+        left: -37%;
+      }
     }
 
     &__colors {
-      display: none;
-      position: absolute;
-      bottom: -43%;
-      right: -5%;
+      max-width: 390px;
+      margin: 62px 0 0 auto;
+      transform: translateY(9%);
     }
     &__color {
-      display: inline-block;
-      max-width: 168px;
-      width: 100%;
-      margin: 0 20px;
+      max-width: 77px;
+      margin: 0 10px;
+
     }
     &__animate {
       //animation: toTop linear 5s;
@@ -758,48 +832,29 @@ body {
 
     &__cube {
       &_left {
-        width: 48px;
-        top: auto;
-        right: 52%;
-        bottom: -42%;
+        width: 6.250vw;
+        top: -15px;
+        left: -4%;
       }
       &_middle {
-        width: 57px;
-        top: auto;
-        right: 30%;
-        bottom: -82%;
+        width: 7.422vw;
+        top: 38%;
+        right: 51%
       }
       &_back {
-        width: 46px;
-        top: auto;
-        right: 23%;
-        bottom: -52%;
+        width: 5.990vw;
+        top: 6%;
+        right: 38%;
       }
       &_right {
-        width: 32px;
-        top: auto;
-        right: 3%;
-        bottom: -70%;
-      }
-    }
-
-    &__description {
-      max-width: inherit;
-    }
-    &__font {
-      font-size: 36px;
-      line-height: 41px;
-
-      margin-top: 66px;
-      &::before {
-        top: 13%;
-        left: -37.8%;
+        width: 5.990vw;
+        top: 34%;
+        right: 0;
       }
     }
   }
 
   .cubes-capabilities {
-    display: none;
     background: none;
     padding: 94px 0 330px;
     &__description {
@@ -891,34 +946,29 @@ body {
   }
 
   .cubes-skin {
-    display: none;
-    padding: 145px 0 176px;
-    background: url("../assets/images/png/SkinBackground.png") no-repeat 50% 50%/cover;
+    padding: 751px 0 68px;
     .cubes-description__text {
-      max-width: 783px;
-      width: 100%;
+      max-width: inherit;
     }
     &__table {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 89px;
+      margin-top: 67px;
     }
     &__item {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
       padding: 13px 0;
-      border: 1px solid #B1BDD6;
-      width: calc(100% / 6 - 2px);
-      max-height: 149px;
+      max-width: 110px;
+      width: 100%;
+      max-height: 45px;
     }
     &__image {
-      filter: drop-shadow(-4px 31px 40px rgba(26, 26, 33, 0.3));
+      max-width: 78px;
+      width: 100%;
+      img {
+        width: 100%;
+      }
     }
   }
 
   .cubes-technologies {
-    margin-top: 1245px;
     padding: 65px 0 90px;
     z-index: 0;
     &__image {
@@ -927,23 +977,23 @@ body {
       margin: 65px auto 0;
     }
     &__cube {
-      &_center {
-        width: 101px;
-        top: 70%;
-        right: 65%;
-      }
       &_left {
         width: 123px;
-        top: 40%;
-        right: 93%;
+        top: 3%;
+        left: -49%;
+      }
+      &_center {
+        width: 101px;
+        top: 65%;
+        right: 74%;
       }
       &_back {
         display: none;
       }
       &_right {
         width: 71px;
-        top: 6%;
-        right: -3%;
+        top: -69%;
+        right: -48%;
       }
     }
   }
@@ -963,23 +1013,23 @@ body {
     &__cube {
       &_top {
         width: 184px;
-        top: 4%;
-        right: -3%;
+        top: 3%;
+        right: -54%;
       }
       &_middle {
         width: 170px;
         top: 37%;
-        right: 12%;
+        right: -31%;
       }
       &_back {
         width: 112px;
         top: 50%;
-        right: -3%;
+        right: -53%;
       }
       &_bottom {
         width: 434px;
         top: 70%;
-        right: -17%;
+        right: -74%;
       }
     }
     &__description {
@@ -1106,7 +1156,7 @@ body {
   }
 
   .cubes-interface {
-    padding: 61px 15px 259px;
+    padding: 61px 15px 204px;
     background: linear-gradient(180deg, #FFFFFF 72.15%, #0A0623 100%);
     &__description {
       max-width: inherit;
@@ -1115,103 +1165,59 @@ body {
 
   .cubes-fonts {
     background: url("../assets/images/png/FontsBackground.png") no-repeat 50% 50%/cover;
-    padding: 130px 15px 161px;
+    padding: 1px 0 0;
 
-    &__screens {
-      display: none;
-      transform: translateY(-31%);
-      position: relative;
-      z-index: 0;
-      //animation-iteration-count: infinite;
-      //animation-timing-function: linear;
-      //animation-name: ticker;
-      //animation-duration: 30s;
+
+    &__gallery {
+      transform: translateY(-21%);
+      margin-top: -86px;
     }
     &__hand {
+      width: 161px;
       position: absolute;
-      top: -38%;
-      right: -1%;
-      z-index: -1;
+      top: -24%;
+      right: -2%;
       &_finger {
-        top: -38%;
-        right: -1%;
-        z-index: 1;
+        width: 92px;
       }
+    }
+
+    &__screens {
+      max-width: 1920px;
+      width: 100%;
+      overflow: hidden;
+    }
+    &__carousel {
+      padding: 0;
+      margin: 0;
+      font-size: 0;
+      width: 9999px;
+
+      transform: translateX(-0.1%);
+      //animation: ticker linear infinite 60s;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+    &__element {
+      display: inline-block;
+      margin: 0 5px;
     }
     &__screen {
-      margin: 0 8px;
-      width: 239px;
-    }
-    @keyframes ticker {
-      0% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        visibility: visible;
-      }
-
-      100% {
-        -webkit-transform: translate3d(-100%, 0, 0);
-        transform: translate3d(-100%, 0, 0);
-      }
+      width: 100%;
+      max-width: 124px;
     }
 
     &__box {
-      position: relative;
-    }
-    &__colors {
-      position: absolute;
-      bottom: -43%;
-      right: -5%;
-    }
-    &__color {
-      display: none;
-      max-width: 168px;
-      width: 100%;
-      margin: 0 20px;
-    }
-    &__animate {
-      animation: toTop linear 5s;
-    }
-    @keyframes toTop {
-      0% {
-        -webkit-transform: translateY(50%);
-        transform: translateY(50%);
-        visibility: visible;
-      }
-
-      100% {
-        -webkit-transform: translateY(0%);
-        transform: translateY(0%);
-      }
+      max-width: 720px;
+      margin: 0 auto 0;
+      padding: 0 15px;
     }
 
+    &__example {
+      display: block;
 
-    &__cube {
-      top: auto;
-      &_left {
-        width: 34px;
-        right: 77%;
-        bottom: -19%;
-      }
-      &_middle {
-        width: 37px;
-        right: 38%;
-        bottom: -51%;
-      }
-      &_back {
-        width: 18px;
-        right: 36%;
-        bottom: -25%;
-      }
-      &_right {
-        width: 26px;
-        right: -4%;
-        bottom: -43%;
-      }
-    }
-
-    &__description {
-      max-width: inherit;
+      margin: 0;
     }
     &__font {
       position: relative;
@@ -1227,6 +1233,54 @@ body {
         top: 235%;
         bottom: -229%;
         left: -25.4%;
+      }
+    }
+
+    &__colors {
+      max-width: 242px;
+      margin: 15px 0 0 auto;
+      transform: translateY(14%);
+    }
+    &__color {
+      max-width: 54px;
+      margin: 0 3px;
+    }
+    &__animate {
+      //animation: toTop linear 5s;
+    }
+    @keyframes toTop {
+      0% {
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+        visibility: visible;
+      }
+
+      100% {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+      }
+    }
+
+    &__cube {
+      &_left {
+        width: 10.625vw;
+        left: -6%;
+        top: -12%;
+      }
+      &_middle {
+        width: 11.563vw;
+        right: 45%;
+        top: 44%;
+      }
+      &_back {
+        width: 5.625vw;
+        right: 43%;
+        top: 10%;
+      }
+      &_right {
+        width: 8.125vw;
+        right: -5%;
+        top: 38%;
       }
     }
   }
@@ -1309,37 +1363,33 @@ body {
   }
 
   .cubes-skin {
-    display: none;
-    padding: 145px 0 176px;
-    //background: url("../assets/images/png/SkinBackground.png") no-repeat 50% 50%/cover;
-    background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%), #EADDF9;
-    mix-blend-mode: normal;
-    backdrop-filter: blur(15px);
+    padding: 1393px 0 60px;
+    box-sizing: border-box;
+    &__box {
+      padding: 0 15px;
+    }
+    .cubes-description__heading {
+      margin: 39px 0 13px;
+    }
     .cubes-description__text {
-      max-width: 783px;
-      width: 100%;
+      max-width: inherit;
     }
     &__table {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 89px;
+      margin-top: 61px;
     }
     &__item {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
       padding: 13px 0;
-      border: 1px solid #B1BDD6;
-      width: calc(100% / 6 - 2px);
-      max-height: 149px;
+      max-width: 96px;
+      max-height: 36px;
     }
     &__image {
-      filter: drop-shadow(-4px 31px 40px rgba(26, 26, 33, 0.3));
+      max-width: 70px;
     }
   }
 
   .cubes-technologies {
     padding: 62px 15px 61px;
+    overflow: inherit;
     &__image {
       width: 326px;
       margin: 31px auto 0;
@@ -1348,21 +1398,22 @@ body {
     &__cube {
       &_center {
         width: 65px;
-        top: 89%;
+        top: 97%;
         right: -7%;
       }
       &_left {
         width: 82px;
-        top: 78%;
-        right: 79%;
+        top: 70%;
+        left: -1%;
       }
       &_back {
         display: none;
       }
       &_right {
         width: 56px;
-        top: -3%;
+        top: -121%;
         right: -5%;
+        z-index: 10;
       }
     }
   }
@@ -1381,7 +1432,7 @@ body {
   }
 
   .cubes-footer {
-    padding: 61px 15px 100px;
+    padding: 63px 15px 100px;
     &__box {
       position: relative;
       z-index: 0;
@@ -1415,7 +1466,7 @@ body {
       width: 100%;
     }
     .cubes-description__heading {
-      margin: 30px 0 31px;
+      margin: 31px 0;
     }
     .cubes-description__text {
       line-height: 26px;

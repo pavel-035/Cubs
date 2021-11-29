@@ -22,12 +22,12 @@
             </div>
 
             <div class="cubes-header__cube cubes-header__cube_left cubes-img_box translateOnMouseMove"
-                 data-animateSpeed="70"
+                 data-animateSpeed="30"
             >
                 <img src="src/assets/images/png/Header/CubeLeft.png" alt="cube">
             </div>
             <div class="cubes-header__cube cubes-header__cube_right cubes-img_box translateOnMouseMove"
-                 data-animateSpeed="50"
+                 data-animateSpeed="5"
             >
                 <img src="src/assets/images/png/Header/CubeRight.png" alt="cube">
             </div>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="cubes-about__figures">
                         <div class="cubes-about__image cubes-img_box translateOnMouseMove"
-                             data-animateSpeed="70"
+                             data-animateSpeed="100"
                         >
                             <img src="src/assets/images/png/AboutImage.png" alt="network">
                         </div>
@@ -69,17 +69,17 @@
                         </div>
 
                         <div class="cubes-about__cube cubes-about__cube_left cubes-img_box translateOnMouseMove"
-                             data-animateSpeed="30"
+                             data-animateSpeed="10"
                         >
                             <img src="src/assets/images/png/About/CubeLeft.png" alt="cube">
                         </div>
                         <div class="cubes-about__cube cubes-about__cube_middle cubes-img_box translateOnMouseMove"
-                             data-animateSpeed="50"
+                             data-animateSpeed="40"
                         >
                             <img src="src/assets/images/png/About/CubeMiddle.png" alt="cube">
                         </div>
                         <div class="cubes-about__cube cubes-about__cube_right cubes-img_box translateOnMouseMove"
-                             data-animateSpeed="50"
+                             data-animateSpeed="20"
                         >
                             <img src="src/assets/images/png/About/CubeRight.png" alt="cube">
                         </div>
@@ -101,7 +101,7 @@
                     </div>
                 </div>
             </section>
-            <section class="cubes-fonts">
+            <section class="cubes-fonts" id="fonts">
                 <div class="cubes-fonts__gallery">
                     <div class="cubes-fonts__hand cubes-img_box">
                         <img src="src/assets/images/png/Hand.png" alt="hand">
@@ -174,38 +174,38 @@
                         </div>
 
                         <div class="cubes-fonts__colors">
-                            <div class="cubes-fonts__cube cubes-fonts__cube_left cubes-img_box translateOnMouseMove"
-                                 data-animateSpeed="70"
-                            >
-                                <img src="src/assets/images/png/Fonts/CubeLeft.png" alt="cube">
-                            </div>
-                            <div class="cubes-fonts__cube cubes-fonts__cube_middle cubes-img_box translateOnMouseMove"
-                                 data-animateSpeed="50"
-                            >
-                                <img src="src/assets/images/png/Fonts/CubeMiddle.png" alt="cube">
-                            </div>
-                            <div class="cubes-fonts__cube cubes-fonts__cube_back cubes-img_box translateOnMouseMove"
-                                 data-animateSpeed="30"
-                            >
-                                <img src="src/assets/images/png/Fonts/CubeBack.png" alt="cube">
-                            </div>
-                            <div class="cubes-fonts__cube cubes-fonts__cube_right cubes-img_box translateOnMouseMove"
-                                 data-animateSpeed="30"
-                            >
-                                <img src="src/assets/images/png/Fonts/CubeRight.png" alt="cube">
-                            </div>
-
-                            <div class="cubes-fonts__color cubes-img_box cubes-fonts__animate_two">
+                            <div class="cubes-fonts__color cubes-img_box">
                                 <img src="src/assets/images/png/Colors/1.png" alt="color">
                             </div>
-                            <div class="cubes-fonts__color cubes-img_box cubes-fonts__animate">
+                            <div class="cubes-fonts__color cubes-img_box">
                                 <img src="src/assets/images/png/Colors/2.png" alt="color">
                             </div>
-                            <div class="cubes-fonts__color cubes-img_box cubes-fonts__animate">
+                            <div class="cubes-fonts__color cubes-img_box">
                                 <img src="src/assets/images/png/Colors/3.png" alt="color">
                             </div>
                             <div class="cubes-fonts__color cubes-img_box">
                                 <img src="src/assets/images/png/Colors/4.png" alt="color">
+                            </div>
+
+                            <div class="cubes-fonts__cube cubes-fonts__cube_left cubes-img_box translateOnMouseMove"
+                                 data-animateSpeed="20"
+                            >
+                                <img src="src/assets/images/png/Fonts/CubeLeft.png" alt="cube">
+                            </div>
+                            <div class="cubes-fonts__cube cubes-fonts__cube_middle cubes-img_box translateOnMouseMove"
+                                 data-animateSpeed="40"
+                            >
+                                <img src="src/assets/images/png/Fonts/CubeMiddle.png" alt="cube">
+                            </div>
+                            <div class="cubes-fonts__cube cubes-fonts__cube_back cubes-img_box translateOnMouseMove"
+                                 data-animateSpeed="10"
+                            >
+                                <img src="src/assets/images/png/Fonts/CubeBack.png" alt="cube">
+                            </div>
+                            <div class="cubes-fonts__cube cubes-fonts__cube_right cubes-img_box translateOnMouseMove"
+                                 data-animateSpeed="5"
+                            >
+                                <img src="src/assets/images/png/Fonts/CubeRight.png" alt="cube">
                             </div>
                         </div>
                     </div>
@@ -221,100 +221,111 @@
                             Наши специалисты учитывают все пожелания заказчика
                         </h2>
                         <p class="cubes-description__text">
-                            Здесь пример текста в 2 строчки, нужно что-то написать или придумать, просто пример<br>
+                            Здесь пример текста в 2 строчки, нужно что-то написать или придумать, просто пример
                             текста в 2 строчки, нужно что-то написать или придумать
                         </p>
                     </div>
-                </div>
-                <div class="cubes-capabilities__cards">
-                    <div class="cubes-capabilities__item">
-                        <div class="cubes-capabilities__data">
-                            <div class="cubes-capabilities__num">
-                                01
+
+                    <div class="cubes-capabilities__cards">
+                        <div class="cubes-capabilities__item">
+                            <div class="cubes-capabilities__drop">
+                                <div class="cubes-capabilities__data">
+                                    <div class="cubes-capabilities__num">
+                                        01
+                                    </div>
+                                    <div class="cubes-capabilities__info">
+                                        <h4 class="cubes-capabilities__title">
+                                            Реалистичные скины
+                                        </h4>
+                                        <span class="cubes-capabilities__text">
+                                        Скины для кубиков были созданы в программе 3d
+                                    </span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="cubes-capabilities__info">
-                                <span class="cubes-capabilities__title">
-                                    Реалистичные скины
-                                </span>
-                                <p class="cubes-capabilities__text">
-                                    Скины для кубиков были созданы в программе 3d
-                                </p>
-                            </div>
-                        </div>
-                        <div class="cubes-capabilities__icon cubes-img_box">
-                            <img src="src/assets/images/png/CapabilitiesImage.png" alt="cub">
-                        </div>
-                    </div>
-                    <div class="cubes-capabilities__item">
-                        <div class="cubes-capabilities__data">
-                            <div class="cubes-capabilities__num">
-                                02
-                            </div>
-                            <div class="cubes-capabilities__info">
-                            <span class="cubes-capabilities__title">
-                                Настройки кубиков
-                            </span>
-                                <p class="cubes-capabilities__text">
-                                    Настройте звук броска, а также размер кубика
-                                </p>
+                            <div class="cubes-capabilities__image cubes-img_box">
+                                <img src="src/assets/images/png/CapabilitiesImage.png" alt="cub">
                             </div>
                         </div>
-                        <div class="cubes-capabilities__icon cubes-img_box">
-                            <img src="src/assets/images/png/CapabilitiesImageTwo.png" alt="cube">
-                        </div>
-                    </div>
-                    <div class="cubes-capabilities__item">
-                        <div class="cubes-capabilities__data">
-                            <div class="cubes-capabilities__num">
-                                03
+                        <div class="cubes-capabilities__item">
+                            <div class="cubes-capabilities__drop">
+                                <div class="cubes-capabilities__data">
+                                    <div class="cubes-capabilities__num">
+                                        02
+                                    </div>
+                                    <div class="cubes-capabilities__info">
+                                        <h4 class="cubes-capabilities__title">
+                                            Настройки кубиков
+                                        </h4>
+                                        <span class="cubes-capabilities__text">
+                                        Настройте звук броска, а также размер кубика
+                                    </span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="cubes-capabilities__info">
-                            <span class="cubes-capabilities__title">
-                                Возможность выбора игры
-                            </span>
-                                <p class="cubes-capabilities__text">
-                                    В приложении представлено большое количество игр
-                                </p>
-                            </div>
-                        </div>
-                        <div class="cubes-capabilities__icon cubes-img_box">
-                            <img src="src/assets/images/png/CapabilitiesImageThree.png" alt="cub">
-                        </div>
-                    </div>
-                    <div class="cubes-capabilities__item">
-                        <div class="cubes-capabilities__data">
-                            <div class="cubes-capabilities__num">
-                                04
-                            </div>
-                            <div class="cubes-capabilities__info">
-                            <span class="cubes-capabilities__title">
-                                Настройка игры
-                            </span>
-                                <p class="cubes-capabilities__text">
-                                    Кубики можно перебросить, убрать, и выбрать их количество
-                                </p>
+                            <div class="cubes-capabilities__image cubes-img_box">
+                                <img src="src/assets/images/png/CapabilitiesImageTwo.png" alt="cube">
                             </div>
                         </div>
-                        <div class="cubes-capabilities__icon cubes-img_box">
-                            <img src="src/assets/images/png/CapabilitiesImageFour.png" alt="cub">
-                        </div>
-                    </div>
-                    <div class="cubes-capabilities__item">
-                        <div class="cubes-capabilities__data">
-                            <div class="cubes-capabilities__num">
-                                05
+                        <div class="cubes-capabilities__item">
+                            <div class="cubes-capabilities__drop">
+                                <div class="cubes-capabilities__data">
+                                    <div class="cubes-capabilities__num">
+                                        03
+                                    </div>
+                                    <div class="cubes-capabilities__info">
+                                        <h4 class="cubes-capabilities__title">
+                                            Возможность выбора игры
+                                        </h4>
+                                        <span class="cubes-capabilities__text">
+                                        В приложении представлено большое количество игр
+                                    </span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="cubes-capabilities__info">
-                            <span class="cubes-capabilities__title">
-                                Доступно даже офлайн
-                            </span>
-                                <p class="cubes-capabilities__text">
-                                    Приложение можно использовать без интернета
-                                </p>
+                            <div class="cubes-capabilities__image cubes-img_box">
+                                <img src="src/assets/images/png/CapabilitiesImageThree.png" alt="cub">
                             </div>
                         </div>
-                        <div class="cubes-capabilities__icon cubes-img_box">
-                            <img src="src/assets/images/png/CapabilitiesImageFive.png" alt="cub">
+                        <div class="cubes-capabilities__item">
+                            <div class="cubes-capabilities__drop">
+                                <div class="cubes-capabilities__data">
+                                    <div class="cubes-capabilities__num">
+                                        04
+                                    </div>
+                                    <div class="cubes-capabilities__info">
+                                        <h4 class="cubes-capabilities__title">
+                                            Настройка игры
+                                        </h4>
+                                        <span class="cubes-capabilities__text">
+                                        Кубики можно перебросить, убрать, и выбрать их количество
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cubes-capabilities__image cubes-img_box">
+                                <img src="src/assets/images/png/CapabilitiesImageFour.png" alt="cub">
+                            </div>
+                        </div>
+                        <div class="cubes-capabilities__item">
+                            <div class="cubes-capabilities__drop">
+                                <div class="cubes-capabilities__data">
+                                    <div class="cubes-capabilities__num">
+                                        05
+                                    </div>
+                                    <div class="cubes-capabilities__info">
+                                        <h4 class="cubes-capabilities__title">
+                                            Доступно даже офлайн
+                                        </h4>
+                                        <span class="cubes-capabilities__text">
+                                        Приложение можно использовать без интернета
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cubes-capabilities__image cubes-img_box">
+                                <img src="src/assets/images/png/CapabilitiesImageFive.png" alt="cub">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -441,7 +452,7 @@
                     </div>
                     <div class="cubes-technologies__image">
                         <div class="cubes-technologies__cube cubes-img_box cubes-technologies__cube_left translateOnMouseMove"
-                             data-animateSpeed="40"
+                             data-animateSpeed="5"
                         >
                             <img src="src/assets/images/png/Technology/CubeLeft.png" alt="cube">
                         </div>
@@ -528,22 +539,22 @@
                     </button>
 
                     <div class="cubes-footer__cube cubes-img_box cubes-footer__cube_top translateOnMouseMove"
-                         data-animateSpeed="70"
+                         data-animateSpeed="50"
                     >
                         <img src="src/assets/images/png/Footer/CubeTop.png" alt="cube">
                     </div>
                     <div class="cubes-footer__cube cubes-img_box cubes-footer__cube_middle translateOnMouseMove"
-                         data-animateSpeed="50"
+                         data-animateSpeed="20"
                     >
                         <img src="src/assets/images/png/Footer/CubeMiddle.png" alt="cube">
                     </div>
                     <div class="cubes-footer__cube cubes-img_box cubes-footer__cube_back translateOnMouseMove"
-                         data-animateSpeed="30"
+                         data-animateSpeed="10"
                     >
                         <img src="src/assets/images/png/Footer/CubeBack.png" alt="cube">
                     </div>
                     <div class="cubes-footer__cube cubes-img_box cubes-footer__cube_bottom translateOnMouseMove"
-                         data-animateSpeed="30"
+                         data-animateSpeed="300"
                     >
                         <img src="src/assets/images/png/Footer/CubeBottom.png" alt="cube">
                     </div>

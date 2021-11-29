@@ -273,14 +273,11 @@ body {
   }
   @keyframes ticker {
     0% {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-      visibility: visible;
+      transform: translateX(0);
     }
 
     100% {
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
+      transform: translateX(-100%);
     }
   }
 
@@ -336,6 +333,7 @@ body {
     max-width: 168px;
     width: 100%;
     margin: 0 21px;
+    transform: translateY(50%);
 
     box-shadow: -4px 31px 40px rgba(26, 26, 33, 0.3);
     border-radius: 3px;
@@ -344,18 +342,16 @@ body {
     }
   }
   &__animate {
-    animation: toTop linear 5s;
-  }
-  @keyframes toTop {
-    0% {
-      -webkit-transform: translateY(50%);
-      transform: translateY(50%);
-      visibility: visible;
+    transform: translateY(0%);
+    transition: 3s;
+    &:nth-child(2) {
+      transition: 4s;
     }
-
-    100% {
-      -webkit-transform: translateY(0%);
-      transform: translateY(0%);
+    &:nth-child(3) {
+      transition: 5s;
+    }
+    &:nth-child(4) {
+      transition: 6s;
     }
   }
 
@@ -387,43 +383,62 @@ body {
 
 .cubes-capabilities {
   background: #fff;
-  padding: 110px 0 330px;
+  padding: 110px 0;
   position: relative;
   z-index: 0;
   &__description {
     max-width: 1024px;
     width: 100%;
   }
+
   &__cards {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 13px;
+    justify-content: space-between;
+    max-width: 1390px;
+    width: 100%;
+    margin: 335px auto 0;
+    padding: 0 100px 240px;
+    box-sizing: border-box;
   }
   &__item {
-    display: flex;
-    flex-wrap: wrap;
+    position: relative;
     &:nth-child(2n) {
-      flex-direction: column-reverse;
-      height: 814px;
-      margin: 0 -200px;
-      .cubes-capabilities__data {
-        border: none;
-        border-top: 1px solid $uniqueColor;
-        &::after {
-          top: -46px;
-          right: 50%;
-          bottom: auto;
-          transform: translateX(-50%);
+      .cubes-capabilities {
+        &__drop {
+          top: auto;
+          bottom: -100%;
+          transform: translate(50%, 51%);
+        }
+        &__data {
+          border: none;
+          border-top: 1px solid $uniqueColor;
+          &::after {
+            top: -46px;
+            right: 50%;
+            bottom: auto;
+            transform: translateX(-50%);
+          }
         }
       }
     }
+    &:nth-child(4) {
+      .cubes-capabilities__info {
+        width: max-content;
+        max-width: 284px;
+      }
+    }
+  }
+  &__drop {
+    position: absolute;
+    top: -100%;
+    right: 50%;
+    transform: translate(50%, -47%);
   }
   &__data {
     position: relative;
 
-    width: max-content;
-    margin: 96px auto 95px;
+    display: flex;
+    align-items: center;
     padding: 14px 0px;
     border-bottom: 1px solid $uniqueColor;
     font-size: 0;
@@ -444,33 +459,26 @@ body {
   }
 
   &__num {
-    display: inline-block;
-    vertical-align: middle;
-
     @include font($uniqueColor, 104px, 104px, 900, "Ubuntu");
     letter-spacing: -0.5rem;
+    flex-shrink: 0;
   }
   &__info {
-    display: inline-block;
-    vertical-align: middle;
-
     margin-left: 15px;
-    max-width: 271px;
-    width: 100%;
   }
   &__title {
-    @include font($textColor, 20px, 30px, 500, "Ubuntu Medium")
+    @include font($textColor, 20px, 30px, 500, "Ubuntu Medium");
+    margin: 0;
+    max-width: 271px;
+    width: max-content;
   }
   &__text {
     @include font($textColor, 16px, 24px, 400, "Ubuntu");
-    margin: 7px 0 0;
+    margin-top: 7px;
   }
 
-  &__icon {
-    display: block;
+  &__image {
     max-width: 153px;
-    width: 100%;
-    margin: 0 auto;
     filter: drop-shadow(-4px 31px 40px rgba(26, 26, 33, 0.3));
     img {
       width: auto;
@@ -480,7 +488,20 @@ body {
 
 .cubes-skin {
   padding: 145px 0 176px;
-  background: url("../assets/images/png/SkinBackground.png") no-repeat 50% 50%/cover;
+  background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%), #EADDF9;
+  mix-blend-mode: normal;
+  backdrop-filter: blur(15px);
+  &::before {
+    content: "";
+
+    background: url("../assets/images/png/SkinGrid.png") no-repeat 50% 50%/cover;
+    width: 429px;
+    height: 224px;
+
+    position: absolute;
+    top: 12%;
+    left: 0;
+  }
   &__box {
     max-width: 1690px;
     padding: 0 35px;
@@ -532,6 +553,7 @@ body {
       width: 162px;
       top: 41%;
       left: -19%;
+      z-index: -1;
     }
     &_center {
       width: 213px;
@@ -628,66 +650,103 @@ body {
   }
 }
 
-@media screen and (max-width: 1379px) {
-  .cubes-capabilities {
-    padding: 110px 0 330px;
-    &__cards {
-      margin-top: 13px;
-    }
-    &__item {
-      &:nth-child(2n) {
-        height: 312px;
-        margin: 0 -50px;
-        .cubes-capabilities__data {
-          &::after {
-            top: -21px;
-          }
-        }
-      }
-    }
-    &__data {
-      position: relative;
+//@media screen and (max-width: 1180px) {
+//  &__cards {
+//    display: flex;
+//    justify-content: space-between;
+//    max-width: 1390px;
+//    width: 100%;
+//    margin: 335px auto 0;
+//    padding: 0 100px 240px;
+//    box-sizing: border-box;
+//  }
+//  &__item {
+//    position: relative;
+//    &:nth-child(2n) {
+//      .cubes-capabilities {
+//        &__drop {
+//          top: auto;
+//          bottom: -100%;
+//          transform: translate(50%, 51%);
+//        }
+//        &__data {
+//          border: none;
+//          border-top: 1px solid $uniqueColor;
+//          &::after {
+//            top: -46px;
+//            right: 50%;
+//            bottom: auto;
+//            transform: translateX(-50%);
+//          }
+//        }
+//      }
+//    }
+//    &:nth-child(4) {
+//      .cubes-capabilities__info {
+//        width: max-content;
+//        max-width: 284px;
+//      }
+//    }
+//  }
+//  &__drop {
+//    position: absolute;
+//    top: -100%;
+//    right: 50%;
+//    transform: translate(50%, -47%);
+//  }
+//  &__data {
+//    position: relative;
+//
+//    display: flex;
+//    align-items: center;
+//    padding: 14px 0px;
+//    border-bottom: 1px solid $uniqueColor;
+//    font-size: 0;
+//    &::after {
+//      content: "";
+//
+//      position: absolute;
+//      bottom: -46px;
+//      right: 50%;
+//      transform: translateX(-50%);
+//
+//      display: block;
+//      width: 1px;
+//      height: 46px;
+//      margin: 0 auto;
+//      background: $uniqueColor;
+//    }
+//  }
+//
+//  &__num {
+//    @include font($uniqueColor, 104px, 104px, 900, "Ubuntu");
+//    letter-spacing: -0.5rem;
+//    flex-shrink: 0;
+//  }
+//  &__info {
+//    margin-left: 15px;
+//  }
+//  &__title {
+//    @include font($textColor, 20px, 30px, 500, "Ubuntu Medium");
+//    margin: 0;
+//    max-width: 271px;
+//    width: max-content;
+//  }
+//  &__text {
+//    @include font($textColor, 16px, 24px, 400, "Ubuntu");
+//    margin-top: 7px;
+//  }
+//
+//  &__image {
+//    max-width: 153px;
+//    filter: drop-shadow(-4px 31px 40px rgba(26, 26, 33, 0.3));
+//    img {
+//      width: auto;
+//    }
+//  }
+//}
 
-      width: max-content;
-      margin: 33px auto 43px;
-      padding: 10px 0px;
-      border-bottom: 1px solid $uniqueColor;
-      font-size: 0;
-      &::after {
-        bottom: -21px;
-        height: 21px;
-      }
-    }
-
-    &__num {
-      font-size: 57px;
-      line-height: 57px;
-      letter-spacing: 0rem;
-    }
-    &__info {
-      margin-left: 15px;
-      max-width: 215px;
-    }
-    &__title {
-      font-size: 16px;
-      line-height: 18px;
-    }
-    &__text {
-      font-size: 14px;
-      line-height: 16px;
-      margin: 5px 0 0;
-    }
-
-    &__icon {
-      max-width: 69px;
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1024px) {
   .cubes-section_box {
     max-width: 720px;
     padding: 0 30px;
@@ -911,33 +970,44 @@ body {
 
   .cubes-capabilities {
     background: none;
-    padding: 94px 0 330px;
+    padding: 94px 0 85px;
     &__description {
       max-width: 1024px;
       width: 100%;
     }
+
     &__cards {
-      margin-top: 13px;
+      max-width: inherit;
+      margin: 163px auto 0;
+      padding: 0 64px 85px;
     }
     &__item {
       &:nth-child(2n) {
-        height: 312px;
-        margin: 0 -50px;
-        .cubes-capabilities__data {
-          &::after {
-            top: -21px;
+        .cubes-capabilities {
+          &__drop {
+            bottom: -100%;
+            transform: translate(50%, 39%);
+          }
+          &__data {
+            &::after {
+              top: -21px;
+            }
           }
         }
       }
+      &:nth-child(4) {
+        .cubes-capabilities__info {
+          width: max-content;
+          max-width: 163px;
+        }
+      }
+    }
+    &__drop {
+      top: -100%;
+      transform: translate(50%, -40%);
     }
     &__data {
-      position: relative;
-
-      width: max-content;
-      margin: 33px auto 43px;
       padding: 10px 0px;
-      border-bottom: 1px solid $uniqueColor;
-      font-size: 0;
       &::after {
         bottom: -21px;
         height: 21px;
@@ -947,24 +1017,25 @@ body {
     &__num {
       font-size: 52px;
       line-height: 52px;
-      letter-spacing: -0.5rem;
+      letter-spacing: 0rem;
     }
     &__info {
       margin-left: 5px;
-      max-width: 128px;
     }
     &__title {
       font-size: 12px;
       line-height: 18px;
+      max-width: 163px;
     }
     &__text {
       font-size: 10px;
       line-height: 15px;
-      margin: 2px 0 0;
+      margin-top: 2px;
     }
 
-    &__icon {
-      max-width: 69px;
+    &__image {
+      max-width: 70px;
+      width: 100%;
       img {
         width: 100%;
       }
@@ -972,7 +1043,13 @@ body {
   }
 
   .cubes-skin {
-    padding: 751px 0 68px;
+    padding: 60px 0 68px;
+    &::before {
+      width: 229px;
+      height: 126px;
+
+      top: 28%;
+    }
     .cubes-description__text {
       max-width: inherit;
     }
@@ -1007,6 +1084,7 @@ body {
         width: 123px;
         top: 3%;
         left: -49%;
+        z-index: 1;
       }
       &_center {
         width: 101px;
@@ -1312,85 +1390,90 @@ body {
   }
 
   .cubes-capabilities {
-    background: none;
-    padding: 81px 15px;
+    padding: 80px 15px 74px;
     &__description {
       max-width: 1024px;
       width: 100%;
     }
+
     &__cards {
       display: block;
-      margin-top: 138px;
+      max-width: inherit;
+      margin: 50px auto 0;
+      padding: 0 15px;
     }
     &__item {
-      position: relative;
+      margin-bottom: 4px;
       &:nth-child(2n) {
-        .cubes-capabilities__data {
-          border-bottom: 1px solid $uniqueColor;
-          border-top: none;
-          &::after {
-            bottom: -21px;
+        .cubes-capabilities {
+          &__drop {
             top: auto;
+            bottom: auto;
+            transform: translate(0%, 0%);
+          }
+          &__data {
+            border: none;
+            &::after {
+              top: auto;
+              bottom: -21px;
+            }
           }
         }
-        .cubes-capabilities__drop {
-          top: -100%;
-          right: 50%;
-          transform: translate(50%, -44%);
+      }
+      &:nth-child(4) {
+        .cubes-capabilities__info {
+          width: 100%;
+          max-width: inherit;
         }
       }
     }
     &__drop {
-      position: absolute;
-      top: -100%;
-      right: 50%;
-      transform: translate(50%, -44%);
-
-      width: max-content;
+      width: 100%;
+      position: inherit;
+      top: auto;
+      right: auto;
+      transform: translate(0%, 0%);
+      border-bottom: 1px solid $uniqueColor;
     }
     &__data {
-      max-width: inherit;
-      padding: 5px 10px;
-      box-sizing: border-box;
-      &::after {
-        bottom: -21px;
-        height: 21px;
-      }
+      border-bottom: none;
     }
 
     &__num {
-      font-size: 57px;
-      line-height: 62px;
+      font-size: 56px;
+      line-height: 56px;
       letter-spacing: 0rem;
-    }
-    &__info {
-      max-width: 185px;
-      margin-left: 7px;
     }
     &__title {
       font-size: 14px;
       line-height: 21px;
+      max-width: inherit;
+      width: 100%;
     }
     &__text {
       font-size: 10px;
       line-height: 15px;
-      margin: 3px 0 0;
+      margin-top: 3px;
     }
 
-    &__icon {
-      display: block;
-      max-width: 63px;
-      margin: 116px auto;
-      filter: drop-shadow(-1.8158px 14.0724px 18.158px rgba(26, 26, 33, 0.3));
-      img {
-        width: 100%;
-      }
+    &__image {
+      max-width: 65px;
+      margin: 35px auto 0;
     }
   }
 
   .cubes-skin {
-    padding: 1393px 0 60px;
+    position: relative;
+
+    padding: 60px 0 60px;
     box-sizing: border-box;
+    &::before {
+      background: url("../assets/images/png/mini/SkinGrid.png") no-repeat 50% 50%/cover;
+      width: 202px;
+      height: 112px;
+
+      top: 7%;
+    }
     &__box {
       padding: 0 15px;
     }

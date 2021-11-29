@@ -257,8 +257,8 @@ body {
     font-size: 0;
     width: 9999px;
 
-    transform: translateX(-0.3%);
-    //animation: ticker linear infinite 60s;
+    //transform: translateX(-0.3%);
+    animation: ticker linear infinite 60s;
     &:hover {
       animation-play-state: paused;
     }
@@ -386,7 +386,6 @@ body {
 }
 
 .cubes-capabilities {
-  display: none;
   background: #fff;
   padding: 110px 0 330px;
   position: relative;
@@ -398,37 +397,34 @@ body {
   &__cards {
     display: flex;
     justify-content: center;
-    margin-top: 357px;
+    align-items: flex-start;
+    margin-top: 13px;
   }
   &__item {
-    position: relative;
-    margin: 0 60px;
+    display: flex;
+    flex-wrap: wrap;
     &:nth-child(2n) {
+      flex-direction: column-reverse;
+      height: 814px;
+      margin: 0 -200px;
       .cubes-capabilities__data {
-        border-bottom: none;
+        border: none;
         border-top: 1px solid $uniqueColor;
         &::after {
-          bottom: auto;
           top: -46px;
+          right: 50%;
+          bottom: auto;
+          transform: translateX(-50%);
         }
-      }
-      .cubes-capabilities__drop {
-        top: 100%;
-        transform: translate(50%, 60%);
       }
     }
   }
-  &__drop {
-    position: absolute;
-    top: -100%;
-    right: 50%;
-    transform: translate(50%, -60%);
+  &__data {
+    position: relative;
 
     width: max-content;
-  }
-  &__data {
-    max-width: 393px;
-    padding: 14px 0;
+    margin: 96px auto 95px;
+    padding: 14px 0px;
     border-bottom: 1px solid $uniqueColor;
     font-size: 0;
     &::after {
@@ -450,7 +446,7 @@ body {
   &__num {
     display: inline-block;
     vertical-align: middle;
-    //width: 90px;
+
     @include font($uniqueColor, 104px, 104px, 900, "Ubuntu");
     letter-spacing: -0.5rem;
   }
@@ -472,9 +468,9 @@ body {
 
   &__icon {
     display: block;
-    max-width: 137px;
+    max-width: 153px;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     filter: drop-shadow(-4px 31px 40px rgba(26, 26, 33, 0.3));
     img {
       width: auto;
@@ -628,6 +624,65 @@ body {
     &_bottom {
       top: 47%;
       right: -57%;
+    }
+  }
+}
+
+@media screen and (max-width: 1379px) {
+  .cubes-capabilities {
+    padding: 110px 0 330px;
+    &__cards {
+      margin-top: 13px;
+    }
+    &__item {
+      &:nth-child(2n) {
+        height: 312px;
+        margin: 0 -50px;
+        .cubes-capabilities__data {
+          &::after {
+            top: -21px;
+          }
+        }
+      }
+    }
+    &__data {
+      position: relative;
+
+      width: max-content;
+      margin: 33px auto 43px;
+      padding: 10px 0px;
+      border-bottom: 1px solid $uniqueColor;
+      font-size: 0;
+      &::after {
+        bottom: -21px;
+        height: 21px;
+      }
+    }
+
+    &__num {
+      font-size: 57px;
+      line-height: 57px;
+      letter-spacing: 0rem;
+    }
+    &__info {
+      margin-left: 15px;
+      max-width: 215px;
+    }
+    &__title {
+      font-size: 16px;
+      line-height: 18px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 16px;
+      margin: 5px 0 0;
+    }
+
+    &__icon {
+      max-width: 69px;
+      img {
+        width: 100%;
+      }
     }
   }
 }
@@ -862,68 +917,40 @@ body {
       width: 100%;
     }
     &__cards {
-      display: flex;
-      justify-content: center;
-      margin-top: 362px;
+      margin-top: 13px;
     }
     &__item {
-      position: relative;
       &:nth-child(2n) {
+        height: 312px;
+        margin: 0 -50px;
         .cubes-capabilities__data {
-          border-bottom: none;
-          border-top: 1px solid $uniqueColor;
           &::after {
-            bottom: auto;
-            top: -46px;
+            top: -21px;
           }
-        }
-        .cubes-capabilities__drop {
-          top: 100%;
-          transform: translate(50%, 60%);
         }
       }
     }
-    &__drop {
-      position: absolute;
-      top: -100%;
-      right: 50%;
-      transform: translate(50%, -60%);
+    &__data {
+      position: relative;
 
       width: max-content;
-    }
-    &__data {
-      max-width: 188px;
-      padding: 14px 0;
+      margin: 33px auto 43px;
+      padding: 10px 0px;
       border-bottom: 1px solid $uniqueColor;
       font-size: 0;
       &::after {
-        content: "";
-
-        position: absolute;
-        bottom: -46px;
-        right: 50%;
-        transform: translateX(-50%);
-
-        display: block;
-        width: 1px;
-        height: 46px;
-        margin: 0 auto;
-        background: $uniqueColor;
+        bottom: -21px;
+        height: 21px;
       }
     }
 
     &__num {
-      display: inline-block;
-      vertical-align: middle;
-      //width: 90px;
-      @include font($uniqueColor, 104px, 104px, 900, "Ubuntu");
+      font-size: 52px;
+      line-height: 52px;
       letter-spacing: -0.5rem;
     }
     &__info {
-      display: inline-block;
-      vertical-align: middle;
-
-      margin-left: 15px;
+      margin-left: 5px;
       max-width: 128px;
     }
     &__title {
@@ -937,11 +964,10 @@ body {
     }
 
     &__icon {
-      max-width: 137px;
-      margin: 0 60px;
-        img {
-          width: 100%;
-        }
+      max-width: 69px;
+      img {
+        width: 100%;
+      }
     }
   }
 

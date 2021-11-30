@@ -7,7 +7,6 @@ window.addEventListener('mousemove', function (e) {
     let windowWidth = window.innerWidth / 2;
     let windowHeight = window.innerHeight / 2;
 
-    console.log(windowWidth);
     if(windowWidth >= 960) {
         translateBlock.forEach(function(item) {
             let translateSpeed = item.getAttribute('data-animateSpeed')

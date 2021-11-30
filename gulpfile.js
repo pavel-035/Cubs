@@ -51,6 +51,6 @@ function serve() {
     watch('./src/assets/fonts/**/*.ttf2', series(fonts)).on('change', sync.reload)
 }
 
-exports.build = series(clear, html, css)
+exports.build = series(clear, html, css, fonts, images, script)
 exports.serve = series(clear, html, css, fonts, images, script, serve)
 exports.clear = clear;

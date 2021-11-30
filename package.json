@@ -22,7 +22,6 @@
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
-    "gulp-image": "^6.2.1",
     "gulp-sass": "^5.0.0",
     "gulp-sync": "^0.1.4",
     "sass": "^1.43.4"

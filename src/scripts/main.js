@@ -1,3 +1,4 @@
+// mouse animate
 window.addEventListener('mousemove', function (e) {
     const translateBlock = document.querySelectorAll('.translateOnMouseMove');
 
@@ -15,7 +16,9 @@ window.addEventListener('mousemove', function (e) {
     }
 })
 
-const sections = document.querySelectorAll('.cubes-fonts__color')
+// colors animate by scroll
+const section = document.getElementById('fonts')
+const colors = section.querySelectorAll('.cubes-fonts__color')
 const animateClass = 'cubes-fonts__animate'
 const options = {
     rootMargin: '200px',
@@ -26,15 +29,13 @@ const callback = entries => {
     entries.forEach(entry => {
         let target = entry.target
         if (entry.intersectionRatio > 0.8) {
-            target.classList.add(animateClass);
-        } else {
-            target.classList.remove(animateClass);
+            colors.forEach(color => color.classList.add(animateClass))
+        } else if (entry.intersectionRatio < 0.79 && entry.boundingClientRect.y > -200) {
+            colors.forEach(color => color.classList.remove(animateClass))
         }
     })
 }
 
 let observer = new IntersectionObserver(callback, options)
 
-sections.forEach((section, index) => {
-    observer.observe(section)
-})
+observer.observe(section)

@@ -928,21 +928,6 @@ body {
       margin: 0 10px;
 
     }
-    &__animate {
-      //animation: toTop linear 5s;
-    }
-    @keyframes toTop {
-      0% {
-        -webkit-transform: translateY(50%);
-        transform: translateY(50%);
-        visibility: visible;
-      }
-
-      100% {
-        -webkit-transform: translateY(0%);
-        transform: translateY(0%);
-      }
-    }
 
     &__cube {
       &_left {
@@ -969,7 +954,7 @@ body {
   }
 
   .cubes-capabilities {
-    background: none;
+    background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
     padding: 94px 0 85px;
     &__description {
       max-width: 1024px;
@@ -1348,21 +1333,6 @@ body {
     &__color {
       max-width: 54px;
       margin: 0 3px;
-    }
-    &__animate {
-      //animation: toTop linear 5s;
-    }
-    @keyframes toTop {
-      0% {
-        -webkit-transform: translateY(50%);
-        transform: translateY(50%);
-        visibility: visible;
-      }
-
-      100% {
-        -webkit-transform: translateY(0%);
-        transform: translateY(0%);
-      }
     }
 
     &__cube {

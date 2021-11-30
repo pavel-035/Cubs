@@ -5,41 +5,41 @@ const del = require('del')
 
 function html() {
     return src('./src/*.html')
-        .pipe(dest('./dist/'))
+        .pipe(dest('./docs/'))
 }
 
 function script() {
     return src('./src/scripts/*.js')
-        .pipe(dest('./dist/src/scripts/'))
+        .pipe(dest('./docs/src/scripts/'))
 }
 
 function css() {
     return src('./src/styles/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(dest('./dist/src/styles'), {})
+        .pipe(dest('./docs/src/styles'), {})
 }
 
 function images() {
      src('./src/assets/images/png/**/*.png')
-        .pipe(dest('./dist/src/assets/images/png/'))
+        .pipe(dest('./docs/src/assets/images/png/'))
      return src('./src/assets/images/svg/**/*.svg')
-        .pipe(dest('./dist/src/assets/images/svg/'))
+        .pipe(dest('./docs/src/assets/images/svg/'))
 }
 
 function fonts() {
     src('./src/assets/fonts/**/*.ttf')
-        .pipe(dest('./dist/src/assets/fonts/'))
+        .pipe(dest('./docs/src/assets/fonts/'))
     return src('./src/assets/fonts/**/*.ttf2')
-        .pipe(dest('./dist/src/assets/fonts/'))
+        .pipe(dest('./docs/src/assets/fonts/'))
 }
 
 function clear() {
-    return del('./dist')
+    return del('./docs')
 }
 
 function serve() {
     sync.init({
-        server: './dist'
+        server: './docs'
     })
 
     watch('src/*.html', series(html)).on('change', sync.reload)

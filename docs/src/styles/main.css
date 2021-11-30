@@ -803,17 +803,6 @@ body {
     max-width: 77px;
     margin: 0 10px;
   }
-  @keyframes toTop {
-    0% {
-      -webkit-transform: translateY(50%);
-      transform: translateY(50%);
-      visibility: visible;
-    }
-    100% {
-      -webkit-transform: translateY(0%);
-      transform: translateY(0%);
-    }
-  }
   .cubes-fonts__cube_left {
     width: 6.25vw;
     top: -15px;
@@ -836,7 +825,7 @@ body {
   }
 
   .cubes-capabilities {
-    background: none;
+    background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
     padding: 94px 0 85px;
   }
   .cubes-capabilities__description {
@@ -1181,17 +1170,6 @@ body {
   .cubes-fonts__color {
     max-width: 54px;
     margin: 0 3px;
-  }
-  @keyframes toTop {
-    0% {
-      -webkit-transform: translateY(50%);
-      transform: translateY(50%);
-      visibility: visible;
-    }
-    100% {
-      -webkit-transform: translateY(0%);
-      transform: translateY(0%);
-    }
   }
   .cubes-fonts__cube_left {
     width: 10.625vw;

@@ -102,7 +102,7 @@ body {
 }
 
 .cubes-wrapper {
-  background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
+  background: linear-gradient(91deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
   min-height: 100vh;
   overflow: hidden;
 }
@@ -117,6 +117,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 10;
 }
 .cubes-header__image_mini {
   display: none;
@@ -474,7 +475,6 @@ body {
 
 .cubes-skin {
   padding: 145px 0 176px;
-  background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%), #EADDF9;
   mix-blend-mode: normal;
   backdrop-filter: blur(15px);
 }
@@ -825,7 +825,7 @@ body {
   }
 
   .cubes-capabilities {
-    background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
+    background: linear-gradient(91deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
     padding: 94px 0 85px;
   }
   .cubes-capabilities__description {
@@ -887,6 +887,9 @@ body {
 
   .cubes-skin {
     padding: 60px 0 68px;
+    background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%), #EADDF9;
+    mix-blend-mode: normal;
+    backdrop-filter: blur(15px);
   }
   .cubes-skin::before {
     width: 229px;
@@ -914,18 +917,18 @@ body {
   }
 
   .cubes-technologies {
-    padding: 65px 0 90px;
+    padding: 65px 0 35px;
     z-index: 0;
   }
   .cubes-technologies__image {
-    max-width: 435px;
+    max-width: 500px;
     width: 100%;
     margin: 65px auto 0;
   }
   .cubes-technologies__cube_left {
     width: 123px;
     top: 3%;
-    left: -49%;
+    left: -35%;
     z-index: 1;
   }
   .cubes-technologies__cube_center {
@@ -938,8 +941,8 @@ body {
   }
   .cubes-technologies__cube_right {
     width: 71px;
-    top: -69%;
-    right: -48%;
+    top: -63%;
+    right: -36%;
   }
 
   .cubes-reviews {
@@ -1035,12 +1038,6 @@ body {
     margin: 0;
   }
 
-  .cubes-wrapper {
-    background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
-    min-height: 100vh;
-    overflow: hidden;
-  }
-
   .cubes-header {
     height: 69.1vw;
   }
@@ -1049,13 +1046,16 @@ body {
   }
   .cubes-header__image_mini {
     display: block;
+    top: -86%;
+    right: -78%;
+    bottom: 0;
+    left: -82%;
   }
   .cubes-header__cube {
     display: none;
   }
 
   .cubes-about {
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
     padding: 62px 15px 40px;
   }
   .cubes-about__figures {
@@ -1260,6 +1260,8 @@ body {
     position: relative;
     padding: 60px 0 60px;
     box-sizing: border-box;
+    mix-blend-mode: normal;
+    backdrop-filter: blur(15px);
   }
   .cubes-skin::before {
     background: url("../assets/images/png/mini/SkinGrid.png") no-repeat 50% 50%/cover;

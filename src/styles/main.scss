@@ -99,7 +99,7 @@ body {
 }
 
 .cubes-wrapper {
-  background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
+  background: linear-gradient(91deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
   min-height: 100vh;
   overflow: hidden;
 }
@@ -113,6 +113,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 10;
     &_mini {
       display: none;
     }
@@ -488,7 +489,6 @@ body {
 
 .cubes-skin {
   padding: 145px 0 176px;
-  background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%), #EADDF9;
   mix-blend-mode: normal;
   backdrop-filter: blur(15px);
   &::before {
@@ -649,102 +649,6 @@ body {
     }
   }
 }
-
-//@media screen and (max-width: 1180px) {
-//  &__cards {
-//    display: flex;
-//    justify-content: space-between;
-//    max-width: 1390px;
-//    width: 100%;
-//    margin: 335px auto 0;
-//    padding: 0 100px 240px;
-//    box-sizing: border-box;
-//  }
-//  &__item {
-//    position: relative;
-//    &:nth-child(2n) {
-//      .cubes-capabilities {
-//        &__drop {
-//          top: auto;
-//          bottom: -100%;
-//          transform: translate(50%, 51%);
-//        }
-//        &__data {
-//          border: none;
-//          border-top: 1px solid $uniqueColor;
-//          &::after {
-//            top: -46px;
-//            right: 50%;
-//            bottom: auto;
-//            transform: translateX(-50%);
-//          }
-//        }
-//      }
-//    }
-//    &:nth-child(4) {
-//      .cubes-capabilities__info {
-//        width: max-content;
-//        max-width: 284px;
-//      }
-//    }
-//  }
-//  &__drop {
-//    position: absolute;
-//    top: -100%;
-//    right: 50%;
-//    transform: translate(50%, -47%);
-//  }
-//  &__data {
-//    position: relative;
-//
-//    display: flex;
-//    align-items: center;
-//    padding: 14px 0px;
-//    border-bottom: 1px solid $uniqueColor;
-//    font-size: 0;
-//    &::after {
-//      content: "";
-//
-//      position: absolute;
-//      bottom: -46px;
-//      right: 50%;
-//      transform: translateX(-50%);
-//
-//      display: block;
-//      width: 1px;
-//      height: 46px;
-//      margin: 0 auto;
-//      background: $uniqueColor;
-//    }
-//  }
-//
-//  &__num {
-//    @include font($uniqueColor, 104px, 104px, 900, "Ubuntu");
-//    letter-spacing: -0.5rem;
-//    flex-shrink: 0;
-//  }
-//  &__info {
-//    margin-left: 15px;
-//  }
-//  &__title {
-//    @include font($textColor, 20px, 30px, 500, "Ubuntu Medium");
-//    margin: 0;
-//    max-width: 271px;
-//    width: max-content;
-//  }
-//  &__text {
-//    @include font($textColor, 16px, 24px, 400, "Ubuntu");
-//    margin-top: 7px;
-//  }
-//
-//  &__image {
-//    max-width: 153px;
-//    filter: drop-shadow(-4px 31px 40px rgba(26, 26, 33, 0.3));
-//    img {
-//      width: auto;
-//    }
-//  }
-//}
 
 @media screen and (max-width: 1024px) {
   .cubes-section_box {
@@ -954,7 +858,7 @@ body {
   }
 
   .cubes-capabilities {
-    background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
+    background: linear-gradient(91deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
     padding: 94px 0 85px;
     &__description {
       max-width: 1024px;
@@ -1029,6 +933,9 @@ body {
 
   .cubes-skin {
     padding: 60px 0 68px;
+    background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%), #EADDF9;
+    mix-blend-mode: normal;
+    backdrop-filter: blur(15px);
     &::before {
       width: 229px;
       height: 126px;
@@ -1057,10 +964,10 @@ body {
   }
 
   .cubes-technologies {
-    padding: 65px 0 90px;
+    padding: 65px 0 35px;
     z-index: 0;
     &__image {
-      max-width: 435px;
+      max-width: 500px;
       width: 100%;
       margin: 65px auto 0;
     }
@@ -1068,7 +975,7 @@ body {
       &_left {
         width: 123px;
         top: 3%;
-        left: -49%;
+        left: -35%;
         z-index: 1;
       }
       &_center {
@@ -1081,8 +988,8 @@ body {
       }
       &_right {
         width: 71px;
-        top: -69%;
-        right: -48%;
+        top: -63%;
+        right: -36%;
       }
     }
   }
@@ -1187,18 +1094,16 @@ body {
     margin: 0;
   }
 
-  .cubes-wrapper {
-    background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%);
-    min-height: 100vh;
-    overflow: hidden;
-  }
-
   .cubes-header {
     height: 69.1vw;
     &__image {
       display: none;
       &_mini {
         display: block;
+        top: -86%;
+        right: -78%;
+        bottom: 0;
+        left: -82%;
       }
     }
     &__cube {
@@ -1207,7 +1112,6 @@ body {
   }
 
   .cubes-about {
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
     padding: 62px 15px 40px;
     &__figures {
       max-width: 290px;
@@ -1437,6 +1341,8 @@ body {
 
     padding: 60px 0 60px;
     box-sizing: border-box;
+    mix-blend-mode: normal;
+    backdrop-filter: blur(15px);
     &::before {
       background: url("../assets/images/png/mini/SkinGrid.png") no-repeat 50% 50%/cover;
       width: 202px;

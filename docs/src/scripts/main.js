@@ -38,3 +38,11 @@ const callback = entries => {
 let observer = new IntersectionObserver(callback, options)
 
 observer.observe(section)
+
+// carousel
+// const $ = require('jquery')
+// const slick = require('slick-carousel')
+
+// window.jQuery = window.$ = $;
+//
+// console.log($);

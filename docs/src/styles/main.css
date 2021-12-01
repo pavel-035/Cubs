@@ -244,36 +244,17 @@ body {
 .cubes-fonts__hand_finger {
   z-index: 1;
 }
-.cubes-fonts__screens {
-  max-width: 1920px;
-  width: 100%;
-  overflow: hidden;
-}
 .cubes-fonts__carousel {
   padding: 0;
   margin: 0;
   font-size: 0;
-  width: 9999px;
-  animation: ticker linear infinite 60s;
-}
-.cubes-fonts__carousel:hover {
-  animation-play-state: paused;
 }
 .cubes-fonts__element {
-  display: inline-block;
   margin: 0 10px;
 }
 .cubes-fonts__screen {
   max-width: 236px;
   width: 100%;
-}
-@keyframes ticker {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
 .cubes-fonts__box {
   position: relative;
@@ -752,23 +733,12 @@ body {
     width: 127px;
     z-index: 1;
   }
-  .cubes-fonts__screens {
-    max-width: 1920px;
-    width: 100%;
-    overflow: hidden;
-  }
   .cubes-fonts__carousel {
     padding: 0;
     margin: 0;
     font-size: 0;
-    width: 9999px;
-    transform: translateX(-0.1%);
-  }
-  .cubes-fonts__carousel:hover {
-    animation-play-state: paused;
   }
   .cubes-fonts__element {
-    display: inline-block;
     margin: 0 5px;
   }
   .cubes-fonts__screen {
@@ -1116,23 +1086,7 @@ body {
   .cubes-fonts__hand_finger {
     width: 92px;
   }
-  .cubes-fonts__screens {
-    max-width: 1920px;
-    width: 100%;
-    overflow: hidden;
-  }
-  .cubes-fonts__carousel {
-    padding: 0;
-    margin: 0;
-    font-size: 0;
-    width: 9999px;
-    transform: translateX(-0.1%);
-  }
-  .cubes-fonts__carousel:hover {
-    animation-play-state: paused;
-  }
   .cubes-fonts__element {
-    display: inline-block;
     margin: 0 5px;
   }
   .cubes-fonts__screen {

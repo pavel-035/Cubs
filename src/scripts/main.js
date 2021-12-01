@@ -40,9 +40,26 @@ let observer = new IntersectionObserver(callback, options)
 observer.observe(section)
 
 // carousel
-// const $ = require('jquery')
-// const slick = require('slick-carousel')
-
-// window.jQuery = window.$ = $;
-//
-// console.log($);
+$(document).ready(function(){
+    $('.cubes-fonts__carousel').slick({
+        slidesToShow: 7,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 2000,
+        cssEase:'linear',
+        infinite: true,
+        arrows: false,
+        pauseOnHover: true,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 5
+            }
+        }, {
+            breakpoint: 425,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});

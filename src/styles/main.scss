@@ -269,6 +269,10 @@ body {
     padding: 0 35px;
     box-sizing: border-box;
   }
+  &__description {
+    max-width: 910px;
+    width: 100%;
+  }
 
   &__example {
     display: flex;
@@ -466,6 +470,7 @@ body {
 }
 
 .cubes-skin {
+  position: relative;
   padding: 145px 0 176px;
   mix-blend-mode: normal;
   backdrop-filter: blur(15px);
@@ -897,6 +902,7 @@ body {
   }
 
   .cubes-skin {
+    position: relative;
     padding: 60px 0 68px;
     background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%), #EADDF9;
     mix-blend-mode: normal;

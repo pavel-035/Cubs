@@ -264,6 +264,10 @@ body {
   padding: 0 35px;
   box-sizing: border-box;
 }
+.cubes-fonts__description {
+  max-width: 910px;
+  width: 100%;
+}
 .cubes-fonts__example {
   display: flex;
   justify-content: space-between;
@@ -455,6 +459,7 @@ body {
 }
 
 .cubes-skin {
+  position: relative;
   padding: 145px 0 176px;
   mix-blend-mode: normal;
   backdrop-filter: blur(15px);
@@ -856,6 +861,7 @@ body {
   }
 
   .cubes-skin {
+    position: relative;
     padding: 60px 0 68px;
     background: linear-gradient(61.39deg, #FFD7F4 3.92%, #D1E2FF 87.51%), #EADDF9;
     mix-blend-mode: normal;

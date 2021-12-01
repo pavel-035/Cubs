@@ -53,11 +53,13 @@ $(document).ready(function(){
         responsive: [{
             breakpoint: 1024,
             settings: {
+                pauseOnHover: false,
                 slidesToShow: 5
             }
         }, {
             breakpoint: 425,
             settings: {
+                pauseOnHover: false,
                 slidesToShow: 3
             }
         }]

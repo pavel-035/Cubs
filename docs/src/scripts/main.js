@@ -42,7 +42,7 @@ observer.observe(section)
 // carousel
 $(document).ready(function(){
     $('.cubes-fonts__carousel').slick({
-        slidesToShow: 7,
+        slidesToShow: 8,
         autoplay: true,
         autoplaySpeed: 0,
         speed: 2000,

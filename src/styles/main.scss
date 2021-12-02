@@ -221,7 +221,7 @@ body {
   padding: 104px 0 250px;
   background: linear-gradient(180deg, #FFFFFF 72.15%, #0A0623 100%);
   &__description {
-    max-width: 783px;
+    max-width: 821px;
     width: 100%;
   }
 }
@@ -253,7 +253,7 @@ body {
     font-size: 0;
   }
   &__element {
-    margin: 0 10px;
+    margin: 0 8px;
   }
   &__screen {
     max-width: 236px;
@@ -284,7 +284,7 @@ body {
   &__font {
     @include font(#fff, 68px, 78px, 700, "Ubuntu Bold");
 
-    max-width: 680px;
+    max-width: 780px;
     width: 100%;
     position: relative;
     z-index: 0;

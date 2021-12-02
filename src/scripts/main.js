@@ -54,7 +54,7 @@ $(document).ready(function(){
             breakpoint: 1024,
             settings: {
                 pauseOnHover: false,
-                slidesToShow: 5
+                slidesToShow: 6
             }
         }, {
             breakpoint: 425,

@@ -744,7 +744,7 @@ body {
     font-size: 0;
   }
   .cubes-fonts__element {
-    margin: 0 5px;
+    margin: 0 4px;
   }
   .cubes-fonts__screen {
     width: 100%;
@@ -1093,7 +1093,7 @@ body {
     width: 92px;
   }
   .cubes-fonts__element {
-    margin: 0 5px;
+    margin: 0 3px;
   }
   .cubes-fonts__screen {
     width: 100%;

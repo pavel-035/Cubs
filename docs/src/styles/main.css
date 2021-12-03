@@ -492,7 +492,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 13px 0;
+  padding: 13px 0 13px;
   border: 1px solid #B1BDD6;
   max-width: 270px;
   width: 100%;
@@ -520,6 +520,9 @@ body {
 .cubes-technologies__cube {
   position: absolute;
   z-index: 10;
+}
+.cubes-technologies__cube_mini {
+  display: none;
 }
 .cubes-technologies__cube_left {
   width: 162px;

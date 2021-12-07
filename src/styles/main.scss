@@ -105,21 +105,35 @@ body {
 }
 
 .cubes-header {
-  position: relative;
   height: 42.1vw;
+  overflow: hidden;
+  &__box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   &__image {
     position: absolute;
     top: 0.4%;
-    right: 0;
+    left: 50%;
+    transform: translateX(-54%);
     bottom: 0;
-    left: 0;
+    z-index: 5;
+    max-width: 87.552vw;
+    width: 100%;
+  }
+  &__heading {
+    @include font(#fff, 0.833vw, 0.938vw, 500, "Ubuntu Medium");
+
+    width: 10.521vw;
+    text-align: center;
+
+    position: absolute;
+    bottom: 29%;
+    text-transform: uppercase;
+    transform: translateX(-80%);
+    left: 50%;
     z-index: 10;
-    &_mini {
-      display: none;
-    }
-    &_laptop {
-      display: none;
-    }
   }
 
   &__cube {
@@ -678,11 +692,19 @@ body {
   .cubes-header {
     height: 57.1vw;
     &__image {
-      display: none;
-      &_laptop {
-        display: block;
-        top: 0.1%;
-      }
+      top: -2%;
+      left: 50%;
+      transform: translateX(-53%);
+      min-width: 117.839vw;
+    }
+    &__heading {
+      font-size: 2.083vw;
+      line-height: 2.344vw;
+
+      width: 28.516vw ;
+
+      bottom: 6%;
+      transform: translateX(-56%);
     }
 
     &__cube {
@@ -1071,14 +1093,19 @@ body {
   .cubes-header {
     height: 69.1vw;
     &__image {
-      display: none;
-      &_mini {
-        display: block;
-        top: -86%;
-        right: -78%;
-        bottom: 0;
-        left: -82%;
-      }
+      top: -2%;
+      left: 50%;
+      transform: translateX(-52%);
+      min-width: 144.839vw;
+    }
+    &__heading {
+      font-size: 4.375vw;
+      line-height: 5vw;
+
+      width: 57.188vw;
+
+      bottom: 0%;
+      transform: translateX(-49%);
     }
     &__cube {
       display: none;

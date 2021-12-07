@@ -7,12 +7,10 @@ window.addEventListener('mousemove', function (e) {
     let windowWidth = window.innerWidth / 2;
     let windowHeight = window.innerHeight / 2;
 
-    if(windowWidth >= 960) {
-        translateBlock.forEach(function(item) {
-            let translateSpeed = item.getAttribute('data-animateSpeed')
-            item.style.transform = `translate( ${ (windowWidth - x) / translateSpeed}px, ${( windowHeight - y ) / translateSpeed}px)`
-        });
-    }
+    translateBlock.forEach(function(item) {
+        let translateSpeed = item.getAttribute('data-animateSpeed')
+        item.style.transform = `translate( ${ (windowWidth - x) / translateSpeed}px, ${( windowHeight - y ) / translateSpeed}px)`
+    });
 })
 
 // colors animate by scroll

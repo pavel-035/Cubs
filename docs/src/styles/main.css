@@ -108,22 +108,38 @@ body {
 }
 
 .cubes-header {
-  position: relative;
   height: 42.1vw;
+  overflow: hidden;
+}
+.cubes-header__box {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .cubes-header__image {
   position: absolute;
   top: 0.4%;
-  right: 0;
+  left: 50%;
+  transform: translateX(-54%);
   bottom: 0;
-  left: 0;
+  z-index: 5;
+  max-width: 87.552vw;
+  width: 100%;
+}
+.cubes-header__heading {
+  font-size: 0.833vw;
+  color: #fff;
+  line-height: 0.938vw;
+  font-weight: 500;
+  font-family: "Ubuntu Medium";
+  width: 10.521vw;
+  text-align: center;
+  position: absolute;
+  bottom: 29%;
+  text-transform: uppercase;
+  transform: translateX(-80%);
+  left: 50%;
   z-index: 10;
-}
-.cubes-header__image_mini {
-  display: none;
-}
-.cubes-header__image_laptop {
-  display: none;
 }
 .cubes-header__cube {
   position: absolute;
@@ -665,11 +681,17 @@ body {
     height: 57.1vw;
   }
   .cubes-header__image {
-    display: none;
+    top: -2%;
+    left: 50%;
+    transform: translateX(-53%);
+    min-width: 117.839vw;
   }
-  .cubes-header__image_laptop {
-    display: block;
-    top: 0.1%;
+  .cubes-header__heading {
+    font-size: 2.083vw;
+    line-height: 2.344vw;
+    width: 28.516vw;
+    bottom: 6%;
+    transform: translateX(-56%);
   }
   .cubes-header__cube {
     position: absolute;
@@ -1021,14 +1043,17 @@ body {
     height: 69.1vw;
   }
   .cubes-header__image {
-    display: none;
+    top: -2%;
+    left: 50%;
+    transform: translateX(-52%);
+    min-width: 144.839vw;
   }
-  .cubes-header__image_mini {
-    display: block;
-    top: -86%;
-    right: -78%;
-    bottom: 0;
-    left: -82%;
+  .cubes-header__heading {
+    font-size: 4.375vw;
+    line-height: 5vw;
+    width: 57.188vw;
+    bottom: 0%;
+    transform: translateX(-49%);
   }
   .cubes-header__cube {
     display: none;

@@ -106,7 +106,7 @@ body {
 
 .cubes-header {
   height: 42.1vw;
-  overflow: hidden;
+  position: relative;
   &__box {
     position: relative;
     width: 100%;

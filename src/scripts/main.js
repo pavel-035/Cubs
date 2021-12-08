@@ -37,11 +37,9 @@ const callback = entries => {
     })
 }
 
-if (windowWidth > 1024) {
-    let observer = new IntersectionObserver(callback, options)
+let observer = new IntersectionObserver(callback, options)
 
-    observer.observe(section)
-}
+observer.observe(section)
 
 // carousel
 $(document).ready(function(){

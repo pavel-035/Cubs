@@ -1012,6 +1012,60 @@ body {
     line-height: 30px;
   }
 }
+@media screen and (max-width: 700px) {
+  .cubes-capabilities__cards {
+    max-width: inherit;
+    margin: 23.286vw auto 0;
+    padding: 0 9.143vw 9.143vw;
+  }
+  .cubes-capabilities__item:nth-child(2n) .cubes-capabilities__drop {
+    bottom: -100%;
+    transform: translate(50%, 39%);
+  }
+  .cubes-capabilities__item:nth-child(2n) .cubes-capabilities__data::after {
+    top: -3vw;
+  }
+  .cubes-capabilities__item:nth-child(4) .cubes-capabilities__info {
+    width: max-content;
+    max-width: 23.286vw;
+  }
+  .cubes-capabilities__drop {
+    top: -100%;
+    transform: translate(50%, -40%);
+  }
+  .cubes-capabilities__data {
+    padding: 1.429vw 0;
+  }
+  .cubes-capabilities__data::after {
+    bottom: -3vw;
+    height: 3vw;
+  }
+  .cubes-capabilities__num {
+    font-size: 7.429vw;
+    line-height: 7.429vw;
+    letter-spacing: 0rem;
+  }
+  .cubes-capabilities__info {
+    margin-left: 0.714vw;
+  }
+  .cubes-capabilities__title {
+    font-size: 1.714vw;
+    line-height: 2.571vw;
+    max-width: 23.286vw;
+  }
+  .cubes-capabilities__text {
+    font-size: 1.429vw;
+    line-height: 2.143vw;
+    margin-top: 0.286vw;
+  }
+  .cubes-capabilities__image {
+    max-width: 10vw;
+    width: 100%;
+  }
+  .cubes-capabilities__image img {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 640px) {
   .cubes-footer__cube {
     display: none;

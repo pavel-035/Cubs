@@ -1059,6 +1059,75 @@ body {
   }
 }
 
+@media screen and (max-width: 700px) {
+  .cubes-capabilities {
+    &__cards {
+      max-width: inherit;
+      margin: 23.286vw auto 0;
+      padding: 0 9.143vw 9.143vw;
+    }
+    &__item {
+      &:nth-child(2n) {
+        .cubes-capabilities {
+          &__drop {
+            bottom: -100%;
+            transform: translate(50%, 39%);
+          }
+          &__data {
+            &::after {
+              top: -3vw;
+            }
+          }
+        }
+      }
+      &:nth-child(4) {
+        .cubes-capabilities__info {
+          width: max-content;
+          max-width: 23.286vw;
+        }
+      }
+    }
+    &__drop {
+      top: -100%;
+      transform: translate(50%, -40%);
+    }
+    &__data {
+      padding: 1.429vw 0;
+      &::after {
+        bottom: -3vw;
+        height: 3vw;
+      }
+    }
+
+    &__num {
+      font-size: 7.429vw;
+      line-height: 7.429vw;
+      letter-spacing: 0rem;
+    }
+    &__info {
+      margin-left: 0.714vw;
+    }
+    &__title {
+      font-size: 1.714vw;
+      line-height: 2.571vw;
+      max-width: 23.286vw;
+    }
+    &__text {
+      font-size: 1.429vw;
+      line-height: 2.143vw;
+      margin-top: 0.286vw;
+    }
+
+    &__image {
+      max-width: 10vw;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 640px) {
   .cubes-footer__cube {
     display: none;

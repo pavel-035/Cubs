@@ -184,17 +184,17 @@ body {
     position: absolute;
     z-index: 15;
     &_left {
-      top: 40%;
-      right: 70%;
+      top: 27%;
+      right: 64%;
       z-index: 5;
     }
     &_middle {
-      top: 21%;
-      right: 29%;
+      top: 9%;
+      right: 41%;
     }
     &_right {
-      top: 35%;
-      right: -16%;
+      top: 24%;
+      right: 15%;
     }
   }
 
@@ -648,6 +648,68 @@ body {
   }
 }
 
+@media screen and (max-width: 1170px) {
+  .cubes-capabilities {
+    &__item {
+      &:nth-child(2n) {
+        .cubes-capabilities {
+          &__data {
+            &::after {
+              top: -34px;
+              bottom: auto;
+            }
+          }
+        }
+      }
+      &:nth-child(4) {
+        .cubes-capabilities__info {
+          max-width: 183px;
+        }
+      }
+    }
+    &__drop {
+      position: absolute;
+      top: -100%;
+      right: 50%;
+      transform: translate(50%, -47%);
+    }
+    &__data {
+      padding: 12px 0px;
+      &::after {
+        bottom: -34px;
+        height: 34px;
+      }
+    }
+
+    &__num {
+      font-size: 54px;
+      line-height: 56px;
+      letter-spacing: 0rem;
+      flex-shrink: 0;
+    }
+    &__info {
+      margin-left: 15px;
+    }
+    &__title {
+      font-size: 14px;
+      line-height: 16px;
+      max-width: 271px;
+      width: max-content;
+    }
+    &__text {
+      font-size: 11px;
+      line-height: 13px;
+    }
+
+    &__image {
+      max-width: 95px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .cubes-section_box {
     max-width: 720px;
@@ -725,17 +787,15 @@ body {
     padding: 65px 0 0px;
     &__figures {
       max-width: 833px;
-      width: 100%;
       min-height: 220px;
       margin: 70px auto 0;
     }
     &__image {
+      position: relative;
       width: 974px;
-      transform: translateX(-29.9%);
+      transform: translateX(-50%);
       top: -7%;
-      right: -17%;
-
-      position: inherit;
+      right: -50%;
     }
 
     &__item {
@@ -749,19 +809,19 @@ body {
       z-index: 15;
       &_left {
         max-width: 55px;
-        top: 21%;
-        right: 74%;
+        top: 26%;
+        right: 65%;
         z-index: 5;
       }
       &_middle {
         max-width: 150px;
-        top: 4%;
-        right: 40%;
+        top: 11%;
+        right: 41%;
       }
       &_right {
         max-width: 104px;
-        top: 18%;
-        right: 2%;
+        top: 27%;
+        right: 15%;
       }
     }
   }
@@ -1071,7 +1131,7 @@ body {
         .cubes-capabilities {
           &__drop {
             bottom: -100%;
-            transform: translate(50%, 39%);
+            transform: translate(50%, 53%);
           }
           &__data {
             &::after {
@@ -1089,7 +1149,7 @@ body {
     }
     &__drop {
       top: -100%;
-      transform: translate(50%, -40%);
+      transform: translate(50%, -57%);
     }
     &__data {
       padding: 1.429vw 0;
@@ -1102,7 +1162,7 @@ body {
     &__num {
       font-size: 7.429vw;
       line-height: 7.429vw;
-      letter-spacing: 0rem;
+      letter-spacing: -0.1rem;
     }
     &__info {
       margin-left: 0.714vw;
@@ -1119,7 +1179,7 @@ body {
     }
 
     &__image {
-      max-width: 10vw;
+      max-width: 8vw;
       width: 100%;
       img {
         width: 100%;
@@ -1200,7 +1260,7 @@ body {
   }
 
   .cubes-about {
-    padding: 62px 15px 40px;
+    padding: 62px 15px 10px;
     &__figures {
       max-width: 290px;
       min-height: 140px;
@@ -1210,8 +1270,8 @@ body {
       display: block;
       width: 620px;
       top: auto;
-      bottom: -36%;
-      left: -62%;
+      right: -46%;
+      bottom: -10%;
       img {
         width: 100%;
       }
@@ -1227,6 +1287,27 @@ body {
       font-size: 14px;
       line-height: 16px;
       margin: 20px 0;
+    }
+
+    &__cube {
+      position: absolute;
+      z-index: 15;
+      &_left {
+        max-width: 35px;
+        top: 26%;
+        right: 63%;
+        z-index: 5;
+      }
+      &_middle {
+        max-width: 99px;
+        top: 11%;
+        right: 41%;
+      }
+      &_right {
+        max-width: 69px;
+        top: 24%;
+        right: 24%;
+      }
     }
   }
 

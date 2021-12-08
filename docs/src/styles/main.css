@@ -187,17 +187,17 @@ body {
   z-index: 15;
 }
 .cubes-about__cube_left {
-  top: 40%;
-  right: 70%;
+  top: 27%;
+  right: 64%;
   z-index: 5;
 }
 .cubes-about__cube_middle {
-  top: 21%;
-  right: 29%;
+  top: 9%;
+  right: 41%;
 }
 .cubes-about__cube_right {
-  top: 35%;
-  right: -16%;
+  top: 24%;
+  right: 15%;
 }
 .cubes-about__description {
   max-width: 785px;
@@ -639,6 +639,53 @@ body {
   right: -57%;
 }
 
+@media screen and (max-width: 1170px) {
+  .cubes-capabilities__item:nth-child(2n) .cubes-capabilities__data::after {
+    top: -34px;
+    bottom: auto;
+  }
+  .cubes-capabilities__item:nth-child(4) .cubes-capabilities__info {
+    max-width: 183px;
+  }
+  .cubes-capabilities__drop {
+    position: absolute;
+    top: -100%;
+    right: 50%;
+    transform: translate(50%, -47%);
+  }
+  .cubes-capabilities__data {
+    padding: 12px 0px;
+  }
+  .cubes-capabilities__data::after {
+    bottom: -34px;
+    height: 34px;
+  }
+  .cubes-capabilities__num {
+    font-size: 54px;
+    line-height: 56px;
+    letter-spacing: 0rem;
+    flex-shrink: 0;
+  }
+  .cubes-capabilities__info {
+    margin-left: 15px;
+  }
+  .cubes-capabilities__title {
+    font-size: 14px;
+    line-height: 16px;
+    max-width: 271px;
+    width: max-content;
+  }
+  .cubes-capabilities__text {
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .cubes-capabilities__image {
+    max-width: 95px;
+  }
+  .cubes-capabilities__image img {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .cubes-section_box {
     max-width: 720px;
@@ -711,16 +758,15 @@ body {
   }
   .cubes-about__figures {
     max-width: 833px;
-    width: 100%;
     min-height: 220px;
     margin: 70px auto 0;
   }
   .cubes-about__image {
+    position: relative;
     width: 974px;
-    transform: translateX(-29.9%);
+    transform: translateX(-50%);
     top: -7%;
-    right: -17%;
-    position: inherit;
+    right: -50%;
   }
   .cubes-about__item {
     font-size: 16px;
@@ -733,19 +779,19 @@ body {
   }
   .cubes-about__cube_left {
     max-width: 55px;
-    top: 21%;
-    right: 74%;
+    top: 26%;
+    right: 65%;
     z-index: 5;
   }
   .cubes-about__cube_middle {
     max-width: 150px;
-    top: 4%;
-    right: 40%;
+    top: 11%;
+    right: 41%;
   }
   .cubes-about__cube_right {
     max-width: 104px;
-    top: 18%;
-    right: 2%;
+    top: 27%;
+    right: 15%;
   }
 
   .cubes-interface {
@@ -1020,7 +1066,7 @@ body {
   }
   .cubes-capabilities__item:nth-child(2n) .cubes-capabilities__drop {
     bottom: -100%;
-    transform: translate(50%, 39%);
+    transform: translate(50%, 53%);
   }
   .cubes-capabilities__item:nth-child(2n) .cubes-capabilities__data::after {
     top: -3vw;
@@ -1031,7 +1077,7 @@ body {
   }
   .cubes-capabilities__drop {
     top: -100%;
-    transform: translate(50%, -40%);
+    transform: translate(50%, -57%);
   }
   .cubes-capabilities__data {
     padding: 1.429vw 0;
@@ -1043,7 +1089,7 @@ body {
   .cubes-capabilities__num {
     font-size: 7.429vw;
     line-height: 7.429vw;
-    letter-spacing: 0rem;
+    letter-spacing: -0.1rem;
   }
   .cubes-capabilities__info {
     margin-left: 0.714vw;
@@ -1059,7 +1105,7 @@ body {
     margin-top: 0.286vw;
   }
   .cubes-capabilities__image {
-    max-width: 10vw;
+    max-width: 8vw;
     width: 100%;
   }
   .cubes-capabilities__image img {
@@ -1131,7 +1177,7 @@ body {
   }
 
   .cubes-about {
-    padding: 62px 15px 40px;
+    padding: 62px 15px 10px;
   }
   .cubes-about__figures {
     max-width: 290px;
@@ -1142,8 +1188,8 @@ body {
     display: block;
     width: 620px;
     top: auto;
-    bottom: -36%;
-    left: -62%;
+    right: -46%;
+    bottom: -10%;
   }
   .cubes-about__image img {
     width: 100%;
@@ -1158,6 +1204,26 @@ body {
     font-size: 14px;
     line-height: 16px;
     margin: 20px 0;
+  }
+  .cubes-about__cube {
+    position: absolute;
+    z-index: 15;
+  }
+  .cubes-about__cube_left {
+    max-width: 35px;
+    top: 26%;
+    right: 63%;
+    z-index: 5;
+  }
+  .cubes-about__cube_middle {
+    max-width: 99px;
+    top: 11%;
+    right: 41%;
+  }
+  .cubes-about__cube_right {
+    max-width: 69px;
+    top: 24%;
+    right: 24%;
   }
 
   .cubes-interface {

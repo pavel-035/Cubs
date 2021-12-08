@@ -155,11 +155,14 @@ body {
   padding: 93px 0 83px;
   &__box {
     position: relative;
-    z-index: 1;
+    z-index: 20;
 
     display: flex;
     flex-wrap: wrap;
 
+  }
+  &__data {
+    z-index: 10;
   }
 
   &__figures {
@@ -168,6 +171,7 @@ body {
     width: 100%;
     min-height: 335px;
     margin: 0 auto;
+    z-index: 5;
   }
   &__image {
     width: 1455px;
@@ -175,12 +179,6 @@ body {
     top: 9%;
     right: -42%;
     z-index: 10;
-    &_mini {
-      display: none;
-    }
-    &_laptop {
-      display: none;
-    }
   }
   &__cube {
     position: absolute;
@@ -724,7 +722,7 @@ body {
   }
 
   .cubes-about {
-    padding: 65px 0 10px;
+    padding: 65px 0 0px;
     &__figures {
       max-width: 833px;
       width: 100%;
@@ -732,25 +730,39 @@ body {
       margin: 70px auto 0;
     }
     &__image {
-      display: none;
-      &_laptop {
-        display: block;
-        width: 974px;
-        transform: translateX(-29.9%);
-        top: -7%;
-        right: -17%;
+      width: 974px;
+      transform: translateX(-29.9%);
+      top: -7%;
+      right: -17%;
 
-        position: inherit;
-      }
-    }
-    &__cube {
-      display: none;
+      position: inherit;
     }
 
     &__item {
       font-size: 16px;
       line-height: 18px;
       margin: 20px 0;
+    }
+
+    &__cube {
+      position: absolute;
+      z-index: 15;
+      &_left {
+        max-width: 55px;
+        top: 21%;
+        right: 74%;
+        z-index: 5;
+      }
+      &_middle {
+        max-width: 150px;
+        top: 4%;
+        right: 40%;
+      }
+      &_right {
+        max-width: 104px;
+        top: 18%;
+        right: 2%;
+      }
     }
   }
 
@@ -825,7 +837,7 @@ body {
     &__color {
       max-width: 77px;
       margin: 0 10px;
-
+      transform: translateY(0%);
     }
 
     &__cube {
@@ -1031,10 +1043,10 @@ body {
       margin: 32px 0 31px;
     }
     &__contacts {
-      margin: 30px 0 30px;
+      margin: 0 0 30px;
     }
     &__link {
-      margin-right: 61px;
+      margin: 30px 61px 0 0;
     }
     &__icon {
       width: 35px;
@@ -1044,6 +1056,12 @@ body {
       font-size: 18px;
       line-height: 30px;
     }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cubes-footer__cube {
+    display: none;
   }
 }
 
@@ -1120,19 +1138,13 @@ body {
       margin: 0 auto 0;
     }
     &__image {
-      display: none;
+      display: block;
+      width: 620px;
+      top: auto;
+      bottom: -36%;
+      left: -62%;
       img {
         width: 100%;
-      }
-      &_mini {
-        display: block;
-        width: 620px;
-        top: auto;
-        bottom: -36%;
-        left: -62%;
-      }
-      &_laptop {
-        display: none;
       }
     }
 

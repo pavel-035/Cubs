@@ -7,10 +7,12 @@ window.addEventListener('mousemove', function (e) {
     let windowWidth = window.innerWidth / 2;
     let windowHeight = window.innerHeight / 2;
 
-    translateBlock.forEach(function(item) {
-        let translateSpeed = item.getAttribute('data-animateSpeed')
-        item.style.transform = `translate( ${ (windowWidth - x) / translateSpeed}px, ${( windowHeight - y ) / translateSpeed}px)`
-    });
+    if (windowWidth > 768) {
+        translateBlock.forEach(function (item) {
+            let translateSpeed = item.getAttribute('data-animateSpeed')
+            item.style.transform = `translate( ${(windowWidth - x) / translateSpeed}px, ${(windowHeight - y) / translateSpeed}px)`
+        });
+    }
 })
 
 // colors animate by scroll
@@ -21,6 +23,8 @@ const options = {
     rootMargin: '200px',
     threshold: [0, 0.79, 0.8]
 }
+
+let windowWidth = window.innerWidth
 
 const callback = entries => {
     entries.forEach(entry => {
@@ -33,9 +37,11 @@ const callback = entries => {
     })
 }
 
-let observer = new IntersectionObserver(callback, options)
+if (windowWidth > 1024) {
+    let observer = new IntersectionObserver(callback, options)
 
-observer.observe(section)
+    observer.observe(section)
+}
 
 // carousel
 $(document).ready(function(){

@@ -160,9 +160,12 @@ body {
 }
 .cubes-about__box {
   position: relative;
-  z-index: 1;
+  z-index: 20;
   display: flex;
   flex-wrap: wrap;
+}
+.cubes-about__data {
+  z-index: 10;
 }
 .cubes-about__figures {
   position: relative;
@@ -170,6 +173,7 @@ body {
   width: 100%;
   min-height: 335px;
   margin: 0 auto;
+  z-index: 5;
 }
 .cubes-about__image {
   width: 1455px;
@@ -177,12 +181,6 @@ body {
   top: 9%;
   right: -42%;
   z-index: 10;
-}
-.cubes-about__image_mini {
-  display: none;
-}
-.cubes-about__image_laptop {
-  display: none;
 }
 .cubes-about__cube {
   position: absolute;
@@ -709,7 +707,7 @@ body {
   }
 
   .cubes-about {
-    padding: 65px 0 10px;
+    padding: 65px 0 0px;
   }
   .cubes-about__figures {
     max-width: 833px;
@@ -718,23 +716,36 @@ body {
     margin: 70px auto 0;
   }
   .cubes-about__image {
-    display: none;
-  }
-  .cubes-about__image_laptop {
-    display: block;
     width: 974px;
     transform: translateX(-29.9%);
     top: -7%;
     right: -17%;
     position: inherit;
   }
-  .cubes-about__cube {
-    display: none;
-  }
   .cubes-about__item {
     font-size: 16px;
     line-height: 18px;
     margin: 20px 0;
+  }
+  .cubes-about__cube {
+    position: absolute;
+    z-index: 15;
+  }
+  .cubes-about__cube_left {
+    max-width: 55px;
+    top: 21%;
+    right: 74%;
+    z-index: 5;
+  }
+  .cubes-about__cube_middle {
+    max-width: 150px;
+    top: 4%;
+    right: 40%;
+  }
+  .cubes-about__cube_right {
+    max-width: 104px;
+    top: 18%;
+    right: 2%;
   }
 
   .cubes-interface {
@@ -802,6 +813,7 @@ body {
   .cubes-fonts__color {
     max-width: 77px;
     margin: 0 10px;
+    transform: translateY(0%);
   }
   .cubes-fonts__cube_left {
     width: 6.25vw;
@@ -986,10 +998,10 @@ body {
     margin: 32px 0 31px;
   }
   .cubes-footer__contacts {
-    margin: 30px 0 30px;
+    margin: 0 0 30px;
   }
   .cubes-footer__link {
-    margin-right: 61px;
+    margin: 30px 61px 0 0;
   }
   .cubes-footer__icon {
     width: 35px;
@@ -998,6 +1010,11 @@ body {
   .cubes-footer__address {
     font-size: 18px;
     line-height: 30px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .cubes-footer__cube {
+    display: none;
   }
 }
 @media screen and (max-width: 425px) {
@@ -1068,20 +1085,14 @@ body {
     margin: 0 auto 0;
   }
   .cubes-about__image {
-    display: none;
-  }
-  .cubes-about__image img {
-    width: 100%;
-  }
-  .cubes-about__image_mini {
     display: block;
     width: 620px;
     top: auto;
     bottom: -36%;
     left: -62%;
   }
-  .cubes-about__image_laptop {
-    display: none;
+  .cubes-about__image img {
+    width: 100%;
   }
   .cubes-about__description {
     max-width: inherit;
